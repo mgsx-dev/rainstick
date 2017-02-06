@@ -1,0 +1,45 @@
+{
+systems: [
+	{
+		type: box2d.world
+		runSimulation: true
+		gravity: {
+			y: -9.940878
+		}
+		timeStep: 0.033333335
+		velocityIterations: 8
+		positionIterations: 3
+	}
+	{
+		type: core.clearScreen
+		color: {
+			r: 0.2
+			g: 0.20183267
+			b: 0.2
+			a: 1
+		}
+		clearColor: true
+		clearDepth: true
+	}
+	{
+		type: g3d.rendering
+		shadowQuality: 10
+		shadowSize: {
+			x: 50
+			y: 50
+		}
+		shadowNear: 0.1
+		shadowFar: 100
+		ambient: {
+			r: 0.4
+			g: 0.4
+			b: 0.4
+			a: 1
+		}
+	}
+	{
+		type: g2d.render
+		culling: false
+	}
+]
+}
