@@ -23,7 +23,7 @@ allprojects {
         ashleyVersion = '1.7.0'
         aiVersion = '1.8.0'
         kitVersion = '0.0.2-SNAPSHOT'
-        pdVersion = '0.4.0-SNAPHOT'
+        pdVersion = '0.5.0-SNAPHOT'
     }
 
     repositories {
