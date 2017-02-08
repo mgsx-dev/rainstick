@@ -257,7 +257,148 @@ entities: [
 		rainstick.resonator: {
 			material: 1
 		}
+		p2d: {
+			reference: "/home/germain/git/box2d-editor/demo-android/assets/particles/fire.p"
+		}
+		2d: {
+			position: {
+				x: -308
+				y: 64
+			}
+		}
+		rainstick.mask: {}
+	}
+	{
+		id: 1
+		2d: {
+			position: {
+				x: 76.420715
+				y: 16
+			}
+		}
+	}
+	{
+		id: 2
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -277
+					y: 392
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 195
+									y: 32
+								}
+								{
+									x: 175.23785
+									y: -162
+								}
+								{
+									x: -28.581726
+									y: -192
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+	}
+	{
+		id: 3
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: 13
+					y: 634
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 110
+									y: 2
+								}
+								{
+									x: 79
+									y: -73
+								}
+								{
+									x: 75
+									y: -126
+								}
+								{
+									x: 116.33174
+									y: -195
+								}
+								{
+									x: -27
+									y: -198
+								}
+								{
+									x: 22
+									y: -137
+								}
+								{
+									x: 24
+									y: -76
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		p2d: {
+			reference: "/home/germain/git/box2d-editor/demo-android/assets/particles/fire.p"
+		}
+		2d: {
+			position: {
+				x: 13
+				y: 634
+			}
+		}
+	}
+	{
+		id: 4
+		p2d: {
+			reference: "/home/germain/git/box2d-editor/demo-android/assets/particles/fire.p"
+		}
+		2d: {
+			position: {
+				x: 106.29201
+				y: 18
+			}
+		}
 	}
 ]
-assets: []
+assets: [
+	{
+		type: com.badlogic.gdx.graphics.g2d.ParticleEffect
+		name: "/home/germain/git/box2d-editor/demo-android/assets/particles/fire.p"
+	}
+]
 }

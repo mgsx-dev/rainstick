@@ -6,6 +6,8 @@ import com.badlogic.ashley.systems.IteratingSystem;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
+import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector3;
 
 import net.mgsx.game.core.GamePipeline;
 import net.mgsx.game.core.GameScreen;
@@ -43,6 +45,7 @@ public class MaskInvertRender extends IteratingSystem
 		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
 		mask.modelInstance.transform.idt();
 		mask.modelInstance.transform.setTranslation(physics.body.getPosition().x, physics.body.getPosition().y, 0);
+		mask.modelInstance.transform.rotate(Vector3.Z, physics.body.getAngle() * MathUtils.radiansToDegrees);
 		batch.render(mask.modelInstance);
 	}
 }

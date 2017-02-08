@@ -15,7 +15,7 @@ public class RainStickPlugin implements Plugin, DefaultPlugin
 	@Override
 	public void initialize(GameScreen engine) 
 	{
-		engine.entityEngine.addSystem(new ResonatorPhysicSystem());
+		engine.entityEngine.addSystem(new ResonatorPhysicSystem(engine));
 		
 		engine.entityEngine.addSystem(new MaskRender(engine));
 		engine.entityEngine.addSystem(new MaskInvertRender(engine));

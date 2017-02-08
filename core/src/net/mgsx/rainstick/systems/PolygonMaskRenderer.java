@@ -17,7 +17,9 @@ import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.attributes.DepthTestAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.EarClippingTriangulator;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.ChainShape;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.ShortArray;
@@ -129,6 +131,7 @@ public class PolygonMaskRenderer extends IteratingSystem
 		Mask mask = Mask.components.get(entity);
 		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
 		mask.modelInstance.transform.idt();
+		mask.modelInstance.transform.rotate(Vector3.Z, physics.body.getAngle() * MathUtils.radiansToDegrees);
 		mask.modelInstance.transform.setTranslation(physics.body.getPosition().x + 20, physics.body.getPosition().y, 0);
 		batch.render(mask.modelInstance);
 	}

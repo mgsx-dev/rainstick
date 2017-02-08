@@ -5,18 +5,22 @@ import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.EntityListener;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
+import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Pool;
 
 import net.mgsx.game.core.GamePipeline;
+import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.core.annotations.Editable;
 import net.mgsx.game.core.annotations.EditableSystem;
 import net.mgsx.game.core.annotations.Storable;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.listeners.Box2DEntityListener;
+import net.mgsx.game.plugins.particle2d.components.Particle2DComponent;
 import net.mgsx.pd.Pd;
 import net.mgsx.rainstick.components.Ball;
 import net.mgsx.rainstick.components.Resonator;
@@ -31,6 +35,7 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		public int material;
 		public float velocity;
 		public float x;
+		public Vector2 position = new Vector2();
 		
 		@Override
 		public int compareTo(Impact i) {
@@ -57,9 +62,11 @@ public class ResonatorPhysicSystem extends IteratingSystem
 			return new Impact();
 		}
 	};
+	private GameScreen game;
 	
-	public ResonatorPhysicSystem() {
+	public ResonatorPhysicSystem(GameScreen game) {
 		super(Family.all(Ball.class, Box2DBodyModel.class).get(), GamePipeline.AFTER_PHYSICS);
+		this.game = game;
 	}
 
 	@Override
@@ -94,6 +101,7 @@ public class ResonatorPhysicSystem extends IteratingSystem
 							}else{
 								i.material = resonator.material;
 							}
+							i.position.set(contact.getWorldManifold().getPoints()[0]);
 							int index = MathUtils.clamp(Math.round(i.x * stereoClusteringSteps), 0, stereoClusteringSteps-1);
 							while(impacts.size <= index) impacts.add(new Array<Impact>());
 							impacts.get(index).add(i);
@@ -116,6 +124,10 @@ public class ResonatorPhysicSystem extends IteratingSystem
 					
 					// TODO sendList doesn't work ...
 					Pd.audio.sendMessage("impact", "impact", i.material, i.mass, i.velocity, i.x);
+					
+					// create particles
+					createParticle(i.position);
+					
 				}
 			}
 		}
@@ -124,6 +136,23 @@ public class ResonatorPhysicSystem extends IteratingSystem
 			pool.freeAll(a);
 			a.clear();
 		}
+	}
+
+	private void createParticle(Vector2 position) {
+		Entity entity = getEngine().createEntity();
+		
+		Particle2DComponent particle = getEngine().createComponent(Particle2DComponent.class);
+		particle.autoRemove = true;
+		particle.position.set(position);
+		particle.reference = "particles.p";
+		
+		// XXX
+		game.assets.load(particle.reference, ParticleEffect.class);
+		game.assets.finishLoading();
+		
+		entity.add(particle);
+		
+		getEngine().addEntity(entity);
 	}
 
 	

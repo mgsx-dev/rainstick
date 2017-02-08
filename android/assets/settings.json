@@ -5,7 +5,7 @@ systems: [
 		runSimulation: true
 		gravity: {
 			x: -8.551285E-4
-			y: 15.297791
+			y: -15.297791
 		}
 		timeStep: 0.05374012
 		velocityIterations: 11
@@ -24,9 +24,6 @@ systems: [
 	{
 		type: core.clearScreen
 		color: {
-			r: 0.2
-			g: 0.20183267
-			b: 0.2
 			a: 1
 		}
 		clearColor: true
@@ -47,6 +44,11 @@ systems: [
 			b: 0.4
 			a: 1
 		}
+	}
+	{
+		type: rainstick.background
+		scale: 0.1
+		texScale: 0.0010963549
 	}
 	{
 		type: g2d.render
