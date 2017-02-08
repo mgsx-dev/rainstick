@@ -14,6 +14,7 @@ import net.mgsx.game.core.tools.RectangleTool;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.components.Box2DFixtureModel;
 import net.mgsx.rainstick.components.Ball;
+import net.mgsx.rainstick.components.InvertMask;
 import net.mgsx.rainstick.components.Mask;
 
 @Editable
@@ -94,9 +95,8 @@ public class GrainGeneratorTool extends RectangleTool
 	
 		// TODO ??
 		Mask mask = getEngine().createComponent(Mask.class);
-		mask.allow = false;
 		entity.add(mask);
-		
+		entity.add(getEngine().createComponent(InvertMask.class));
 		// Transform2DComponent transform = getEngine().createComponent(Transform2DComponent.class);
 		//entity.add(transform);
 		

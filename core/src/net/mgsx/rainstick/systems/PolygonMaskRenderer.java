@@ -26,6 +26,7 @@ import net.mgsx.game.core.GamePipeline;
 import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.components.Box2DFixtureModel;
+import net.mgsx.rainstick.components.InvertMask;
 import net.mgsx.rainstick.components.Mask;
 
 public class PolygonMaskRenderer extends IteratingSystem
@@ -98,7 +99,7 @@ public class PolygonMaskRenderer extends IteratingSystem
 						mesh.setIndices(indices.shrink());
 						mesh.setVertices(points);
 						
-						float depth = mask.allow ? 1 : 0;
+						float depth = InvertMask.components.has(entity) ? 0 : 1;
 						
 						mb.part("a", mesh, GL20.GL_TRIANGLES, new Material(
 								ColorAttribute.createDiffuse(Color.WHITE),
@@ -116,23 +117,11 @@ public class PolygonMaskRenderer extends IteratingSystem
 	@Override
 	public void update(float deltaTime) {
 		batch.begin(game.camera);
-		Gdx.gl.glDepthFunc(GL20.GL_LEQUAL);
-		Gdx.gl.glDepthRangef(1, 0);
-		Gdx.gl.glFrontFace(GL20.GL_CW);
-		Gdx.gl.glEnable(GL20.GL_CULL_FACE);
-		
-		
-		Gdx.gl.glDepthMask(true);
-		Gdx.gl.glClearDepthf(0);
-		Gdx.gl.glClear(GL20.GL_DEPTH_BUFFER_BIT);
-		Gdx.gl.glClearDepthf(1); // restore to default
-		Gdx.gl.glColorMask(false, false, true, false); // XXX debug here
-		super.update(deltaTime);
+		Gdx.gl.glDepthFunc(GL20.GL_LESS);
+		Gdx.gl.glEnable(GL20.GL_DEPTH_TEST);
+		//super.update(deltaTime);
 		batch.end();
-		
-		Gdx.gl.glColorMask(true, true, true, true);
-		Gdx.gl.glDepthRangef(0,1); // restore back
-		Gdx.gl.glDepthFunc(GL20.GL_GEQUAL);
+		Gdx.gl.glDepthRangef(0, 1);
 	}
 	
 	@Override
@@ -140,7 +129,7 @@ public class PolygonMaskRenderer extends IteratingSystem
 		Mask mask = Mask.components.get(entity);
 		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
 		mask.modelInstance.transform.idt();
-		mask.modelInstance.transform.setTranslation(physics.body.getPosition().x, physics.body.getPosition().y, 0);
+		mask.modelInstance.transform.setTranslation(physics.body.getPosition().x + 20, physics.body.getPosition().y, 0);
 		batch.render(mask.modelInstance);
 	}
 }
