@@ -90,6 +90,10 @@ public class GrainGeneratorTool extends RectangleTool
 		Ball reso = getEngine().createComponent(Ball.class);
 		
 		entity.add(reso);
+	
+		// TODO ??
+//		Mask mask = getEngine().createComponent(Mask.class);
+//		entity.add(mask);
 		
 		getEngine().addEntity(entity);
 	}
