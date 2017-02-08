@@ -13,7 +13,7 @@ import net.mgsx.game.core.annotations.Editable;
 import net.mgsx.game.core.tools.RectangleTool;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.components.Box2DFixtureModel;
-import net.mgsx.rainstick.components.Resonator;
+import net.mgsx.rainstick.components.Ball;
 
 @Editable
 public class GrainGeneratorTool extends RectangleTool
@@ -87,7 +87,7 @@ public class GrainGeneratorTool extends RectangleTool
 		
 		entity.add(physics);
 		
-		Resonator reso = getEngine().createComponent(Resonator.class);
+		Ball reso = getEngine().createComponent(Ball.class);
 		
 		entity.add(reso);
 		

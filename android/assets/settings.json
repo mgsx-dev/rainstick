@@ -4,11 +4,22 @@ systems: [
 		type: box2d.world
 		runSimulation: true
 		gravity: {
-			y: -9.940878
+			x: -8.551285E-4
+			y: 15.297791
 		}
-		timeStep: 0.033333335
-		velocityIterations: 8
-		positionIterations: 3
+		timeStep: 0.05374012
+		velocityIterations: 11
+		positionIterations: 6
+	}
+	{
+		type: rainstick.resonator-system
+		stereoClusteringSteps: 2
+		stereoMin: -61.65918
+		stereoMax: 5
+		massMin: 116.744965
+		massMax: 849.0669
+		velMin: 4.585372
+		velMax: 327.9236
 	}
 	{
 		type: core.clearScreen
