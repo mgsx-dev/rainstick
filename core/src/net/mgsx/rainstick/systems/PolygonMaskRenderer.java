@@ -12,9 +12,10 @@ import com.badlogic.gdx.graphics.Mesh;
 import com.badlogic.gdx.graphics.VertexAttribute;
 import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
-import com.badlogic.gdx.graphics.g3d.ModelCache;
-import com.badlogic.gdx.graphics.g3d.Renderable;
+import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
+import com.badlogic.gdx.graphics.g3d.attributes.DepthTestAttribute;
+import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.EarClippingTriangulator;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.ChainShape;
@@ -31,8 +32,9 @@ public class PolygonMaskRenderer extends IteratingSystem
 {
 	private ModelBatch batch;
 	private GameScreen game;
+	
 	public PolygonMaskRenderer(GameScreen game) {
-		super(Family.all(Mask.class, Box2DBodyModel.class).get(), GamePipeline.RENDER);
+		super(Family.all(Mask.class, Box2DBodyModel.class).get(), GamePipeline.RENDER -1);
 		this.game = game;
 		batch = new ModelBatch();
 	}
@@ -50,13 +52,11 @@ public class PolygonMaskRenderer extends IteratingSystem
 			public void entityAdded(Entity entity) {
 				Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
 				Mask mask = Mask.components.get(entity);
-				ModelCache cache = new ModelCache();
 				
-				
+				ModelBuilder mb = new ModelBuilder();
+				mb.begin();
 				Vector2 pos = new Vector2(physics.body.getPosition());
 				
-				mask.mesh = cache;
-				cache.begin();
 				Vector2 v = new Vector2();
 				for(Box2DFixtureModel fix : physics.fixtures){
 					
@@ -68,8 +68,8 @@ public class PolygonMaskRenderer extends IteratingSystem
 						delPoints = new float[2 * count];
 						for(int i=0 ; i<count ; i++){
 							poly.getVertex(i, v);
-							delPoints[i*2+0] = v.x + pos.x;
-							delPoints[i*2+1] = v.y + pos.y;
+							delPoints[i*2+0] = v.x;
+							delPoints[i*2+1] = v.y;
 						}
 					}
 					else if(fix.def.shape instanceof ChainShape){
@@ -78,8 +78,8 @@ public class PolygonMaskRenderer extends IteratingSystem
 						delPoints = new float[2 * count];
 						for(int i=0 ; i<count ; i++){
 							chain.getVertex(i, v);
-							delPoints[i*2+0] = v.x + pos.x;
-							delPoints[i*2+1] = v.y + pos.y;
+							delPoints[i*2+0] = v.x;
+							delPoints[i*2+1] = v.y;
 						}
 					}
 					if(delPoints != null)
@@ -98,15 +98,16 @@ public class PolygonMaskRenderer extends IteratingSystem
 						mesh.setIndices(indices.shrink());
 						mesh.setVertices(points);
 						
-						Renderable r = new Renderable();
-						r.meshPart.set("a", mesh, 0, indices.size, GL20.GL_TRIANGLES);
-						r.material = new Material(ColorAttribute.createDiffuse(Color.WHITE));
-						cache.add(r);
+						float depth = mask.allow ? 1 : 0;
 						
+						mb.part("a", mesh, GL20.GL_TRIANGLES, new Material(
+								ColorAttribute.createDiffuse(Color.WHITE),
+								new DepthTestAttribute(GL20.GL_ALWAYS, depth, depth, true)
+								));
 						
 					}
 				}
-				cache.end();
+				mask.modelInstance = new ModelInstance(mb.end());
 				
 			}
 		});
@@ -115,16 +116,31 @@ public class PolygonMaskRenderer extends IteratingSystem
 	@Override
 	public void update(float deltaTime) {
 		batch.begin(game.camera);
+		Gdx.gl.glDepthFunc(GL20.GL_LEQUAL);
+		Gdx.gl.glDepthRangef(1, 0);
 		Gdx.gl.glFrontFace(GL20.GL_CW);
 		Gdx.gl.glEnable(GL20.GL_CULL_FACE);
+		
+		
+		Gdx.gl.glDepthMask(true);
+		Gdx.gl.glClearDepthf(0);
+		Gdx.gl.glClear(GL20.GL_DEPTH_BUFFER_BIT);
+		Gdx.gl.glClearDepthf(1); // restore to default
+		Gdx.gl.glColorMask(false, false, true, false); // XXX debug here
 		super.update(deltaTime);
 		batch.end();
 		
+		Gdx.gl.glColorMask(true, true, true, true);
+		Gdx.gl.glDepthRangef(0,1); // restore back
+		Gdx.gl.glDepthFunc(GL20.GL_GEQUAL);
 	}
 	
 	@Override
 	protected void processEntity(Entity entity, float deltaTime) {
 		Mask mask = Mask.components.get(entity);
-		batch.render(mask.mesh);
+		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
+		mask.modelInstance.transform.idt();
+		mask.modelInstance.transform.setTranslation(physics.body.getPosition().x, physics.body.getPosition().y, 0);
+		batch.render(mask.modelInstance);
 	}
 }

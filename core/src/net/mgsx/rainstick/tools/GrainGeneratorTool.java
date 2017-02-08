@@ -14,6 +14,7 @@ import net.mgsx.game.core.tools.RectangleTool;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.components.Box2DFixtureModel;
 import net.mgsx.rainstick.components.Ball;
+import net.mgsx.rainstick.components.Mask;
 
 @Editable
 public class GrainGeneratorTool extends RectangleTool
@@ -92,8 +93,12 @@ public class GrainGeneratorTool extends RectangleTool
 		entity.add(reso);
 	
 		// TODO ??
-//		Mask mask = getEngine().createComponent(Mask.class);
-//		entity.add(mask);
+		Mask mask = getEngine().createComponent(Mask.class);
+		mask.allow = false;
+		entity.add(mask);
+		
+		// Transform2DComponent transform = getEngine().createComponent(Transform2DComponent.class);
+		//entity.add(transform);
 		
 		getEngine().addEntity(entity);
 	}
