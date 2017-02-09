@@ -15,8 +15,10 @@ import net.mgsx.game.core.GamePipeline;
 import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.core.annotations.Editable;
 import net.mgsx.game.core.annotations.EditableSystem;
+import net.mgsx.game.core.annotations.Storable;
 import net.mgsx.rainstick.components.ImpactComponent;
 
+@Storable("rainstick.impact.render")
 @EditableSystem
 public class ImpactRender extends IteratingSystem
 {

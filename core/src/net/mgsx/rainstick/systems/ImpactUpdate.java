@@ -7,8 +7,10 @@ import com.badlogic.ashley.systems.IteratingSystem;
 import net.mgsx.game.core.GamePipeline;
 import net.mgsx.game.core.annotations.Editable;
 import net.mgsx.game.core.annotations.EditableSystem;
+import net.mgsx.game.core.annotations.Storable;
 import net.mgsx.rainstick.components.ImpactComponent;
 
+@Storable("rainstick.impact.update")
 @EditableSystem
 public class ImpactUpdate extends IteratingSystem
 {

@@ -10,6 +10,7 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 
 import net.mgsx.game.core.EditorScreen;
 import net.mgsx.game.core.annotations.Editable;
+import net.mgsx.game.core.components.Repository;
 import net.mgsx.game.core.tools.RectangleTool;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.components.Box2DFixtureModel;
@@ -20,9 +21,11 @@ import net.mgsx.rainstick.components.Mask;
 @Editable
 public class GrainGeneratorTool extends RectangleTool
 {
-
 	@Editable
-	public int count = 10;
+	public boolean persisted = false;
+	
+	@Editable
+	public int count = 2;
 	
 	@Editable
 	public FixtureDef fix = new FixtureDef();
@@ -93,12 +96,13 @@ public class GrainGeneratorTool extends RectangleTool
 		
 		entity.add(reso);
 	
-		// TODO ??
 		Mask mask = getEngine().createComponent(Mask.class);
 		entity.add(mask);
 		entity.add(getEngine().createComponent(InvertMask.class));
-		// Transform2DComponent transform = getEngine().createComponent(Transform2DComponent.class);
-		//entity.add(transform);
+		
+		if(persisted){
+			entity.add(getEngine().createComponent(Repository.class));
+		}
 		
 		getEngine().addEntity(entity);
 	}

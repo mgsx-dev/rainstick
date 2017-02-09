@@ -1,0 +1,65 @@
+{
+systems: [
+	{
+		type: box2d.world
+		runSimulation: true
+		gravity: {
+			y: -13.909449
+		}
+		timeStep: 0.04249719
+		velocityIterations: 11
+		positionIterations: 6
+	}
+	{
+		type: rainstick.resonator-system
+		stereoClusteringSteps: 2
+		stereoMin: -61.65918
+		stereoMax: 5
+		massMin: 0
+		massMax: 293.79453
+		velMin: 0
+		velMax: 27.421885
+	}
+	{
+		type: rainstick.impact.update
+		lifeMax: 0.5273734
+	}
+	{
+		type: core.clearScreen
+		color: {
+			a: 1
+		}
+		clearColor: true
+		clearDepth: true
+	}
+	{
+		type: g3d.rendering
+		shadowQuality: 10
+		shadowSize: {
+			x: 50
+			y: 50
+		}
+		shadowNear: 0.1
+		shadowFar: 100
+		ambient: {
+			r: 0.4
+			g: 0.4
+			b: 0.4
+			a: 1
+		}
+	}
+	{
+		type: rainstick.background
+		scale: 6.350231E-4
+		texScale: 0.03492958
+	}
+	{
+		type: rainstick.impact.render
+		scale: 115.48837
+	}
+	{
+		type: g2d.render
+		culling: false
+	}
+]
+}
