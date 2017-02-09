@@ -4,6 +4,8 @@ import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.core.plugins.Plugin;
 import net.mgsx.game.plugins.DefaultPlugin;
 import net.mgsx.rainstick.systems.BackgroundSystem;
+import net.mgsx.rainstick.systems.ImpactRender;
+import net.mgsx.rainstick.systems.ImpactUpdate;
 import net.mgsx.rainstick.systems.MaskInvertRender;
 import net.mgsx.rainstick.systems.MaskRender;
 import net.mgsx.rainstick.systems.PolygonMaskRenderer;
@@ -17,10 +19,15 @@ public class RainStickPlugin implements Plugin, DefaultPlugin
 	{
 		engine.entityEngine.addSystem(new ResonatorPhysicSystem(engine));
 		
+		engine.entityEngine.addSystem(new ImpactUpdate());
+		
+		
 		engine.entityEngine.addSystem(new MaskRender(engine));
 		engine.entityEngine.addSystem(new MaskInvertRender(engine));
 		engine.entityEngine.addSystem(new PolygonMaskRenderer(engine));
 		engine.entityEngine.addSystem(new BackgroundSystem(engine));
+		engine.entityEngine.addSystem(new ImpactRender(engine));
+
 	}
 
 }

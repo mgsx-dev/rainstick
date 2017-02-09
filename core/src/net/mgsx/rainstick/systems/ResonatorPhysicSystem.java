@@ -5,7 +5,6 @@ import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.EntityListener;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
-import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Contact;
@@ -20,9 +19,9 @@ import net.mgsx.game.core.annotations.EditableSystem;
 import net.mgsx.game.core.annotations.Storable;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.listeners.Box2DEntityListener;
-import net.mgsx.game.plugins.particle2d.components.Particle2DComponent;
 import net.mgsx.pd.Pd;
 import net.mgsx.rainstick.components.Ball;
+import net.mgsx.rainstick.components.ImpactComponent;
 import net.mgsx.rainstick.components.Resonator;
 
 @Storable("rainstick.resonator-system")
@@ -62,7 +61,7 @@ public class ResonatorPhysicSystem extends IteratingSystem
 			return new Impact();
 		}
 	};
-	private GameScreen game;
+	protected GameScreen game;
 	
 	public ResonatorPhysicSystem(GameScreen game) {
 		super(Family.all(Ball.class, Box2DBodyModel.class).get(), GamePipeline.AFTER_PHYSICS);
@@ -126,7 +125,7 @@ public class ResonatorPhysicSystem extends IteratingSystem
 					Pd.audio.sendMessage("impact", "impact", i.material, i.mass, i.velocity, i.x);
 					
 					// create particles
-					createParticle(i.position);
+					createParticle(i.position, i.mass * i.velocity * i.velocity, i.material);
 					
 				}
 			}
@@ -138,19 +137,18 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		}
 	}
 
-	private void createParticle(Vector2 position) {
+	private void createParticle(Vector2 position, float energy, int material) 
+	{
 		Entity entity = getEngine().createEntity();
 		
-		Particle2DComponent particle = getEngine().createComponent(Particle2DComponent.class);
-		particle.autoRemove = true;
-		particle.position.set(position);
-		particle.reference = "particles.p";
+		ImpactComponent ic = getEngine().createComponent(ImpactComponent.class);
 		
-		// XXX
-		game.assets.load(particle.reference, ParticleEffect.class);
-		game.assets.finishLoading();
+		ic.position.set(position);
+		ic.life = 0;
+		ic.energy = energy;
+		ic.material = material;
 		
-		entity.add(particle);
+		entity.add(ic);
 		
 		getEngine().addEntity(entity);
 	}
