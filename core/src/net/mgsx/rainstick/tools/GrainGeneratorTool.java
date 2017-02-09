@@ -44,7 +44,7 @@ public class GrainGeneratorTool extends RectangleTool
 		float h = endPoint.y - startPoint.y;
 		for(int i=0 ; i < count ; i++){
 			for(int j=0 ; j < count ; j++){
-				Vector2 p = new Vector2(w*j/(float)(count-1), h*i/(float)(count-1)).add(startPoint);
+				Vector2 p = new Vector2(w*j/(float)(count), h*i/(float)(count)).add(startPoint);
 				createParticle(p);
 			}
 		}
