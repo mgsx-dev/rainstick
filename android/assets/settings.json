@@ -4,10 +4,9 @@ systems: [
 		type: box2d.world
 		runSimulation: true
 		gravity: {
-			x: -8.551285E-4
-			y: -15.297791
+			y: 13.909449
 		}
-		timeStep: 0.05374012
+		timeStep: 0.04249719
 		velocityIterations: 11
 		positionIterations: 6
 	}
@@ -16,10 +15,10 @@ systems: [
 		stereoClusteringSteps: 2
 		stereoMin: -61.65918
 		stereoMax: 5
-		massMin: 116.744965
-		massMax: 849.0669
-		velMin: 4.585372
-		velMax: 327.9236
+		massMin: 0
+		massMax: 22.085356
+		velMin: 0
+		velMax: 82.75578
 	}
 	{
 		type: core.clearScreen
