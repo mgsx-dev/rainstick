@@ -1,9 +1,16 @@
 package net.mgsx.rainstick;
 
 import net.mgsx.game.core.GameScreen;
+import net.mgsx.game.core.annotations.PluginDef;
 import net.mgsx.game.core.plugins.Plugin;
 import net.mgsx.game.plugins.DefaultPlugin;
+import net.mgsx.rainstick.components.Ball;
+import net.mgsx.rainstick.components.ImpactComponent;
+import net.mgsx.rainstick.components.InvertMask;
+import net.mgsx.rainstick.components.Mask;
+import net.mgsx.rainstick.components.Resonator;
 import net.mgsx.rainstick.systems.BackgroundSystem;
+import net.mgsx.rainstick.systems.GyroSystem;
 import net.mgsx.rainstick.systems.ImpactRender;
 import net.mgsx.rainstick.systems.ImpactUpdate;
 import net.mgsx.rainstick.systems.MaskInvertRender;
@@ -11,6 +18,7 @@ import net.mgsx.rainstick.systems.MaskRender;
 import net.mgsx.rainstick.systems.PolygonMaskRenderer;
 import net.mgsx.rainstick.systems.ResonatorPhysicSystem;
 
+@PluginDef(components={Ball.class, ImpactComponent.class, InvertMask.class, Mask.class, Resonator.class})
 public class RainStickPlugin implements Plugin, DefaultPlugin
 {
 
@@ -28,6 +36,7 @@ public class RainStickPlugin implements Plugin, DefaultPlugin
 		engine.entityEngine.addSystem(new BackgroundSystem(engine));
 		engine.entityEngine.addSystem(new ImpactRender(engine));
 
+		engine.entityEngine.addSystem(new GyroSystem());
 	}
 
 }

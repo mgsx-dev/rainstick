@@ -7,6 +7,6 @@ varying vec2 v_world;
 void main()
 {
 	v_texCoords = a_texCoord0;
-	v_world = u_projTrans * a_position;
+	v_world = (u_projTrans * a_position).xy;
 	gl_Position = a_position;
 }

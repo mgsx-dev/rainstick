@@ -5,6 +5,7 @@ import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.EntityListener;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Contact;
@@ -71,6 +72,9 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	@Override
 	public void addedToEngine(Engine engine) 
 	{
+		// TODO dispose when finished !
+		Pd.audio.open(Gdx.files.internal("pd/engine2.pd"));
+		
 		super.addedToEngine(engine);
 		
 		engine.addEntityListener(getFamily(), new EntityListener() {

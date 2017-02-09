@@ -48,6 +48,11 @@ public class BackgroundSystem extends EntitySystem
 		shader = new ShaderProgram(
 				Gdx.files.internal("shaders/bg-vertex.glsl"),
 				Gdx.files.internal("shaders/bg-fragment.glsl"));
+		shader.begin();
+		if(!shader.isCompiled()){
+			Gdx.app.error("GLSL", shader.getLog());
+		}
+		shader.end();
 	}
 	
 	public void update(float deltaTime) 

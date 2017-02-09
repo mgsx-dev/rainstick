@@ -44,6 +44,11 @@ public class ImpactRender extends IteratingSystem
 		shader = new ShaderProgram(
 				Gdx.files.internal("shaders/impact-vertex.glsl"),
 				Gdx.files.internal("shaders/impact-fragment.glsl"));
+		shader.begin();
+		if(!shader.isCompiled()){
+			Gdx.app.error("GLSL", shader.getLog());
+		}
+		shader.end();
 	}
 	
 	@Override

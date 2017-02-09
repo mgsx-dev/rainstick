@@ -23,7 +23,7 @@ allprojects {
         ashleyVersion = '1.7.0'
         aiVersion = '1.8.0'
         kitVersion = '0.0.2-SNAPSHOT'
-        pdVersion = '0.5.0-SNAPHOT'
+        pdVersion = '0.5.0-SNAPSHOT'
     }
 
     repositories {
@@ -78,6 +78,9 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
         
+        compile "net.mgsx.gdx:gdx-pd-backend-android:$pdVersion"
+        natives "net.mgsx.gdx:gdx-pd-platform:$pdVersion:natives-android"
+        
     }
 }
 
@@ -94,6 +97,3 @@ project(":core") {
     }
 }
 
-tasks.eclipse.doLast {
-    delete ".project"
-}

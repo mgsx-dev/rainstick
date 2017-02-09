@@ -16,9 +16,9 @@ void main() {
     vec4 color = texture2D(u_texture, v_texCoords);
 
     float s = length(v_texCoords);
-    float t = atan2(v_texCoords.y, v_texCoords.x) / 3.1415;
+    float t = atan(v_texCoords.y, v_texCoords.x) / 3.1415;
 
     float d = 1.0 - s;
 
-    gl_FragColor = vec4(v_color.rgb * color.rgb * (sin(t * 100)+1.0)*0.5, d * v_color.a);
+    gl_FragColor = vec4(v_color.rgb * color.rgb * (sin(t * 100.0)+1.0)*0.5, d * v_color.a);
 }
