@@ -5,6 +5,7 @@ import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.EntityListener;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
+import com.badlogic.ashley.utils.ImmutableArray;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
@@ -68,10 +69,13 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		super(Family.all(Ball.class, Box2DBodyModel.class).get(), GamePipeline.AFTER_PHYSICS);
 		this.game = game;
 	}
+	
+	private ImmutableArray<Entity> balls;
 
 	@Override
 	public void addedToEngine(Engine engine) 
 	{
+		balls = engine.getEntitiesFor(getFamily());
 		// TODO dispose when finished !
 		Pd.audio.open(Gdx.files.internal("pd/engine2.pd"));
 		
@@ -117,8 +121,9 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	
 	
 	@Override
-	protected void processEntity(Entity entity, float deltaTime) 
-	{
+	public void update(float deltaTime) {
+		super.update(deltaTime);
+		
 		for(Array<Impact> a : impacts){
 			if(a.size > 0){
 				a.sort();
@@ -139,6 +144,33 @@ public class ResonatorPhysicSystem extends IteratingSystem
 			pool.freeAll(a);
 			a.clear();
 		}
+		
+		// TODO cluster by friction ? mass ... surface
+		float totalForce = 0;
+		float totalVel = 0;
+		int total = 0;
+		Vector2 position = new Vector2();
+		for(Entity entity : balls)
+		{
+			Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
+			float vel = physics.body.getLinearVelocity().len();
+			float force = physics.body.getMass();
+			
+			totalVel += vel * force;
+			totalForce += force;
+			position.add(physics.body.getPosition().scl(1));
+			total++;
+		}
+		Pd.audio.sendMessage("ambient", "ambient", 
+				(totalVel / total) / totalForce, 
+				position.x / total, 
+				position.y/total);
+	}
+	
+	@Override
+	protected void processEntity(Entity entity, float deltaTime) 
+	{
+		
 	}
 
 	private void createParticle(Vector2 position, float energy, int material) 
