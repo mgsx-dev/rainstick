@@ -21,6 +21,7 @@ public class AndroidEditorLauncher extends AndroidApplication {
 		EditorConfiguration editConfig = new EditorConfiguration();
 		editConfig.plugins.add(new RainStickEditorPlugin());
 		editConfig.path = "rainstick-default.json";
+		editConfig.settingsPath = "settings.json";
 		
 		initialize(new EditorApplication(editConfig){
 			@Override
