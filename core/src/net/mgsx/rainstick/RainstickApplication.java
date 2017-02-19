@@ -31,7 +31,6 @@ public class RainstickApplication extends GameApplication
 		// create default rainstick screen (loading default rainstick data)
 		GameScreen rainstickScreen = new GameScreen(assets, registry);
 		
-		rainstickScreen.loadSettings(Gdx.files.internal("settings.json"));
 		rainstickScreen.load(Gdx.files.internal("rainstick-default.json"));
 		
 		// TODO create a true splash screen with some branding information.

@@ -869,5 +869,76 @@ entities: [
 		rainstick.mask-invert: {}
 	}
 ]
-assets: []
+systems: [
+	{
+		type: box2d.world
+		enabled: true
+		runSimulation: true
+		gravity: {
+			y: 0
+		}
+		timeStep: 0.04249719
+		velocityIterations: 11
+		positionIterations: 6
+	}
+	{
+		type: rainstick.resonator-system
+		enabled: true
+		stereoClusteringSteps: 2
+		stereoMin: -61.65918
+		stereoMax: 5
+		massMin: 0
+		massMax: 22.085356
+		velMin: 0
+		velMax: 82.75578
+	}
+	{
+		type: rainstick.impact.update
+		enabled: true
+		lifeMax: 3
+	}
+	{
+		type: core.clearScreen
+		enabled: true
+		color: {
+			a: 1
+		}
+		clearColor: true
+		clearDepth: true
+	}
+	{
+		type: g3d.rendering
+		enabled: true
+		shadowQuality: 10
+		shadowSize: {
+			x: 50
+			y: 50
+		}
+		shadowNear: 0.1
+		shadowFar: 100
+		ambient: {
+			r: 0.4
+			g: 0.4
+			b: 0.4
+			a: 1
+		}
+	}
+	{
+		type: rainstick.background
+		enabled: true
+		scale: 0.1
+		texScale: 0.0010963549
+	}
+	{
+		type: rainstick.impact.render
+		enabled: true
+		scale: 10
+	}
+	{
+		type: g2d.render
+		enabled: true
+		culling: false
+	}
+]
+views: []
 }
