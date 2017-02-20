@@ -10,6 +10,7 @@ import net.mgsx.rainstick.components.InvertMask;
 import net.mgsx.rainstick.components.Mask;
 import net.mgsx.rainstick.components.Resonator;
 import net.mgsx.rainstick.systems.BackgroundSystem;
+import net.mgsx.rainstick.systems.BallOutlineRender;
 import net.mgsx.rainstick.systems.GyroSystem;
 import net.mgsx.rainstick.systems.ImpactRender;
 import net.mgsx.rainstick.systems.ImpactUpdate;
@@ -34,7 +35,10 @@ public class RainStickPlugin implements Plugin, DefaultPlugin
 		engine.entityEngine.addSystem(new MaskInvertRender(engine));
 		engine.entityEngine.addSystem(new PolygonMaskRenderer(engine));
 		engine.entityEngine.addSystem(new BackgroundSystem(engine));
+		engine.entityEngine.addSystem(new BallOutlineRender(engine));
 		engine.entityEngine.addSystem(new ImpactRender(engine));
+		
+
 
 		engine.entityEngine.addSystem(new GyroSystem());
 	}
