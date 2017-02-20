@@ -9,5 +9,6 @@ import net.mgsx.game.core.annotations.Storable;
 public class Ball implements Component
 {
 	public final static ComponentMapper<Ball> components = ComponentMapper.getFor(Ball.class);
+	public float radius = 1;
 	
 }
