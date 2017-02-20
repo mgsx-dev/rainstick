@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.MathUtils;
 
 import net.mgsx.game.core.GamePipeline;
@@ -16,6 +15,7 @@ import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.core.annotations.Editable;
 import net.mgsx.game.core.annotations.EditableSystem;
 import net.mgsx.game.core.annotations.Storable;
+import net.mgsx.game.core.helpers.FilesShaderProgram;
 import net.mgsx.rainstick.components.ImpactComponent;
 
 @Storable("rainstick.impact.render")
@@ -25,7 +25,11 @@ public class ImpactRender extends IteratingSystem
 	private GameScreen game;
 	private SpriteBatch batch;
 	private Sprite sprite;
-	private ShaderProgram shader;
+	
+	@Editable
+	public FilesShaderProgram shader = new FilesShaderProgram(
+			Gdx.files.internal("shaders/impact-vertex.glsl"),
+			Gdx.files.internal("shaders/impact-fragment.glsl"));
 	
 	@Editable
 	public float scale = 10;
@@ -34,27 +38,13 @@ public class ImpactRender extends IteratingSystem
 		super(Family.all(ImpactComponent.class).get(), GamePipeline.RENDER);
 		this.game = game;
 		batch = new SpriteBatch();
-		sprite = new Sprite(new Texture(Gdx.files.internal("perlin.png")));
-		createShader();
-	}
-	
-	@Editable
-	public void createShader(){
-		if(shader != null) shader.dispose();
-		shader = new ShaderProgram(
-				Gdx.files.internal("shaders/impact-vertex.glsl"),
-				Gdx.files.internal("shaders/impact-fragment.glsl"));
-		shader.begin();
-		if(!shader.isCompiled()){
-			Gdx.app.error("GLSL", shader.getLog());
-		}
-		shader.end();
+		sprite = new Sprite(new Texture(Gdx.files.internal("perlin.png"))); // TODO inject asset @Asset
 	}
 	
 	@Override
 	public void update(float deltaTime) {
 		batch.begin();
-		batch.setShader(shader);
+		batch.setShader(shader.program());
 		batch.setProjectionMatrix(game.camera.combined);
 		batch.enableBlending();
 		Gdx.gl.glEnable(GL20.GL_DEPTH_TEST);
