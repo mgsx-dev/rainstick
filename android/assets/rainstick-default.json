@@ -924,17 +924,6 @@ systems: [
 		}
 	}
 	{
-		type: rainstick.background
-		enabled: true
-		scale: 0.1
-		texScale: 0.0010963549
-	}
-	{
-		type: rainstick.impact.render
-		enabled: true
-		scale: 10
-	}
-	{
 		type: g2d.render
 		enabled: true
 		culling: false
