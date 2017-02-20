@@ -21,6 +21,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.ChainShape;
+import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.ShortArray;
 
@@ -83,6 +84,19 @@ public class PolygonMaskRenderer extends IteratingSystem
 							chain.getVertex(i, v);
 							delPoints[i*2+0] = v.x;
 							delPoints[i*2+1] = v.y;
+						}
+					}
+					else if(fix.def.shape instanceof CircleShape){
+						CircleShape c = (CircleShape)fix.def.shape;
+						count = 16;
+						delPoints = new float[2 * count];
+						for(int i=0 ; i<count ; i++){
+							//c.getVertex(i, v);
+							float t = i / 16f;
+							float x = c.getRadius() * MathUtils.cos(t * MathUtils.PI2);
+							float y = c.getRadius() * MathUtils.sin(t * MathUtils.PI2);
+							delPoints[i*2+0] = x;
+							delPoints[i*2+1] = y;
 						}
 					}
 					if(delPoints != null)
