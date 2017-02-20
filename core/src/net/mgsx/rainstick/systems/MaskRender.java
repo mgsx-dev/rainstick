@@ -45,6 +45,7 @@ public class MaskRender extends IteratingSystem
 	protected void processEntity(Entity entity, float deltaTime) {
 		Mask mask = Mask.components.get(entity);
 		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
+		if(mask.modelInstance== null) return;
 		mask.modelInstance.transform.idt();
 		mask.modelInstance.transform.setTranslation(physics.body.getPosition().x, physics.body.getPosition().y, 0);
 		mask.modelInstance.transform.rotate(Vector3.Z, physics.body.getAngle() * MathUtils.radiansToDegrees);
