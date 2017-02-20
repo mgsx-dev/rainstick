@@ -93,6 +93,7 @@ public class GrainGeneratorTool extends RectangleTool
 		entity.add(physics);
 		
 		Ball reso = getEngine().createComponent(Ball.class);
+		reso.radius = radius;
 		
 		entity.add(reso);
 	
