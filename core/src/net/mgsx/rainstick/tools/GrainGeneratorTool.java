@@ -5,8 +5,11 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
+import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
+import com.badlogic.gdx.physics.box2d.Shape;
+import com.badlogic.gdx.utils.GdxRuntimeException;
 
 import net.mgsx.game.core.EditorScreen;
 import net.mgsx.game.core.annotations.Editable;
@@ -21,6 +24,10 @@ import net.mgsx.rainstick.components.Mask;
 @Editable
 public class GrainGeneratorTool extends RectangleTool
 {
+	public static enum Type{
+		Circle, Triangle, Square, Pentagon, Hexagon, Septagon, Octogon, Random
+	}
+	
 	@Editable
 	public boolean persisted = false;
 	
@@ -29,9 +36,9 @@ public class GrainGeneratorTool extends RectangleTool
 	
 	@Editable
 	public FixtureDef fix = new FixtureDef();
-
+	
 	@Editable
-	public int resolution = 6;
+	public Type geometry = Type.Circle;
 	
 	@Editable
 	public float radius = 1;
@@ -64,21 +71,44 @@ public class GrainGeneratorTool extends RectangleTool
 		physics.def.type = BodyType.DynamicBody;
 		physics.def.allowSleep = false;
 		
-		PolygonShape shape = new PolygonShape();
+		Shape shape;
 		
-		int res = MathUtils.random(3,  7);
-		Vector2[] vertices = new Vector2[res];;
-		for(int i=0 ; i<res ; i++){
+		if(geometry == Type.Circle)
+		{
+			CircleShape circle = new CircleShape();
+			circle.setRadius(this.radius);
 			
-			float x = MathUtils.cos(MathUtils.PI2 * i/(float)(res)) * radius;
-			float y = MathUtils.sin(MathUtils.PI2 * i/(float)(res)) * radius;
-			
-			vertices[i] = new Vector2(x, y);
+			shape = circle;
 		}
-		shape.set(vertices );
-		
-//		CircleShape shape = new CircleShape();
-//		shape.setRadius(this.radius);
+		else
+		{
+			int res;
+			switch(geometry){
+			case Triangle: res = 3;	break;
+			case Square: res = 4; break;
+			case Pentagon: res = 5; break;
+			case Hexagon: res = 6; break;
+			case Septagon: res = 7; break;
+			case Octogon: res = 8; break;
+			case Random: res = MathUtils.random(3,  8); break;
+			default:
+				// shouldn't occurs
+				throw new GdxRuntimeException("resolution not supported");
+			}
+			
+			PolygonShape polygon = new PolygonShape();
+			Vector2[] vertices = new Vector2[res];;
+			for(int i=0 ; i<res ; i++){
+				
+				float x = MathUtils.cos(MathUtils.PI2 * i/(float)(res)) * radius;
+				float y = MathUtils.sin(MathUtils.PI2 * i/(float)(res)) * radius;
+				
+				vertices[i] = new Vector2(x, y);
+			}
+			polygon.set(vertices);
+			
+			shape = polygon;
+		}
 		
 		Box2DFixtureModel fix = new Box2DFixtureModel();
 		fix.def = new FixtureDef();
@@ -92,10 +122,10 @@ public class GrainGeneratorTool extends RectangleTool
 		
 		entity.add(physics);
 		
-		Ball reso = getEngine().createComponent(Ball.class);
-		reso.radius = radius;
+		Ball ball = getEngine().createComponent(Ball.class);
+		ball.radius = radius;
 		
-		entity.add(reso);
+		entity.add(ball);
 	
 		Mask mask = getEngine().createComponent(Mask.class);
 		entity.add(mask);
