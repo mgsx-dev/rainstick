@@ -1,37 +1,55 @@
 package net.mgsx.rainstick.systems;
 
+import org.puredata.core.PdListener;
+
+import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ai.GdxAI;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.g3d.ModelBatch;
-import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.MathUtils;
-import com.badlogic.gdx.math.Vector3;
-import com.badlogic.gdx.physics.box2d.CircleShape;
 
 import net.mgsx.game.core.GamePipeline;
 import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
+import net.mgsx.pd.Pd;
+import net.mgsx.pd.events.PdAdapter;
 import net.mgsx.rainstick.components.Ball;
-import net.mgsx.rainstick.components.InvertMask;
-import net.mgsx.rainstick.components.Mask;
 
 public class BallOutlineRender extends IteratingSystem {
 
 
 	private ShapeRenderer batch;
 	private GameScreen game;
+	private float feedback;
+	private PdListener feedbackListener;
 	
 	public BallOutlineRender(GameScreen game) {
 		super(Family.all(Ball.class,Box2DBodyModel.class).get(), GamePipeline.RENDER );
 		this.game = game;
 		batch = new ShapeRenderer();
+		feedbackListener = new PdAdapter(){
+			@Override
+			public void receiveFloat(String source, float x) {
+				feedback = x;
+			}
+		};
+	}
+	
+	@Override
+	public void addedToEngine(Engine engine) {
+		super.addedToEngine(engine);
+		Pd.audio.addListener("feedback", feedbackListener);
+	}
+	
+	@Override
+	public void removedFromEngine(Engine engine) {
+		Pd.audio.removeListener("feedback", feedbackListener);
+		super.removedFromEngine(engine);
 	}
 	
 	@Override
@@ -68,6 +86,6 @@ public class BallOutlineRender extends IteratingSystem {
 		float speed =MathUtils.clamp(( physics.body.getLinearVelocity().len() - min) / (max - min), 0, 1) ;
 		float speed2 = .5f + .5f * (float)Math.sin(GdxAI.getTimepiece().getTime() * 0.3f * speed);
 		batch.setColor(1f,1f,1f,0.05f+speed * .25f);
-		batch.circle(x, y, ball .radius  +(1-speed2)* .55f, 16);
+		batch.circle(x, y, ball .radius  +(1-speed2)* .55f * feedback, 16);
 	}
 }
