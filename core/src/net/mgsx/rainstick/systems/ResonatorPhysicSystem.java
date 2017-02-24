@@ -77,7 +77,7 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	{
 		balls = engine.getEntitiesFor(getFamily());
 		// TODO dispose when finished !
-		Pd.audio.open(Gdx.files.internal("pd/engine2.pd"));
+		Pd.audio.open(Gdx.files.internal("pd/engine.pd"));
 		
 		super.addedToEngine(engine);
 		
