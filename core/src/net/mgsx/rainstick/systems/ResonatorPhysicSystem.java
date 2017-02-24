@@ -56,6 +56,14 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	@Editable
 	public float velMin = 1, velMax = 10;
 	
+	@Editable
+	public float f1 = 359, f2= 426,f3= 1748,f4= 3000 , q=1000, gain = 10 ;
+	
+	@Editable
+	public void sendFormants (){
+		Pd.audio.sendList("kit-formants", f1,f2,f3,f4,q,gain);
+	}
+	
 	private Array<Array<Impact>> impacts = new Array<Array<Impact>>();
 	private Pool<Impact> pool = new Pool<Impact>(){
 		@Override
@@ -78,6 +86,7 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		balls = engine.getEntitiesFor(getFamily());
 		// TODO dispose when finished !
 		Pd.audio.open(Gdx.files.internal("pd/engine.pd"));
+		sendFormants();
 		
 		super.addedToEngine(engine);
 		
