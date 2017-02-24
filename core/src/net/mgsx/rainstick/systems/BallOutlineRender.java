@@ -85,7 +85,7 @@ public class BallOutlineRender extends IteratingSystem {
 		float max = getEngine().getSystem(ResonatorPhysicSystem.class).velMax;
 		float speed =MathUtils.clamp(( physics.body.getLinearVelocity().len() - min) / (max - min), 0, 1) ;
 		float speed2 = .5f + .5f * (float)Math.sin(GdxAI.getTimepiece().getTime() * 0.3f * speed);
-		batch.setColor(1f,1f,1f,0.05f+speed * .25f);
-		batch.circle(x, y, ball .radius  +(1-speed2)* .55f * feedback, 16);
+		batch.setColor(1f,1f,1f,/*0.05f+ 0.051f*feedback+speed * .05f*/ 10f/255f);
+		batch.circle(x, y, ball .radius*(0.5f + feedback*0.5f)  +(1-speed2)* .025f , 16);
 	}
 }
