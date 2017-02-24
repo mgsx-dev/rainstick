@@ -15,7 +15,7 @@ import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 public class CalibrationSystem extends IteratingSystem
 {
 	@Editable(readonly=true, realtime=true)
-	public float velMax, massMax;
+	public float velMax, massMax, xMin, xMax;
 	
 	@Editable
 	public boolean run;
@@ -26,7 +26,7 @@ public class CalibrationSystem extends IteratingSystem
 	
 	@Editable
 	public void reset(){
-		velMax = massMax = 0;
+		velMax = massMax = xMin = xMax = 0;
 	}
 	
 	@Override
@@ -41,5 +41,7 @@ public class CalibrationSystem extends IteratingSystem
 		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
 		velMax = Math.max(physics.body.getLinearVelocity().len(), velMax);
 		massMax = Math.max(physics.body.getMass(), massMax);
+		xMin = Math.min(physics.body.getPosition().x, xMin);
+		xMax = Math.max(physics.body.getPosition().x, xMax);
 	}
 }
