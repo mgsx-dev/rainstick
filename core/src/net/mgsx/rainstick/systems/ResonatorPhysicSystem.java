@@ -56,6 +56,9 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	@Editable
 	public float velMin = 1, velMax = 10;
 	
+	@Editable
+	public float energyMax = 16;
+	
 	private Array<Array<Impact>> impacts = new Array<Array<Impact>>();
 	private Pool<Impact> pool = new Pool<Impact>(){
 		@Override
@@ -145,26 +148,30 @@ public class ResonatorPhysicSystem extends IteratingSystem
 			a.clear();
 		}
 		
-		// TODO cluster by friction ? mass ... surface
-		float totalForce = 0;
-		float totalVel = 0;
+		// aggregate total friction on back plane : send energy and position.
+		float totalEnergy = 0;
 		int total = 0;
-		Vector2 position = new Vector2();
+		float position = 0;
 		for(Entity entity : balls)
 		{
 			Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
-			float vel = physics.body.getLinearVelocity().len();
-			float force = physics.body.getMass();
 			
-			totalVel += vel * force;
-			totalForce += force;
-			position.add(physics.body.getPosition().scl(1));
+			float mass = physics.body.getMass();
+			mass = MathUtils.clamp((mass - massMin) / (massMax - massMin), 0, 1);
+			
+			float vel = physics.body.getLinearVelocity().len();
+			vel = MathUtils.clamp((vel - velMin) / (velMax - velMin), 0, 1);
+			
+			float pos = MathUtils.clamp((physics.body.getPosition().x - stereoMin) / (stereoMax - stereoMin), 0, 1);
+			
+			float energy = vel * vel * mass;
+			totalEnergy += energy;
+			position += pos;
 			total++;
 		}
 		Pd.audio.sendMessage("ambient", "ambient", 
-				(totalVel / total) / totalForce, 
-				position.x / total, 
-				position.y/total);
+				totalEnergy / energyMax, 
+				totalEnergy > 0 ? (position / total) : 0, 0); // FIXME add zero to workaround OSC padding bug
 	}
 	
 	@Override
