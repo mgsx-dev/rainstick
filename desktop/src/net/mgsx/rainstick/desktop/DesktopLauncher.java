@@ -15,7 +15,8 @@ public class DesktopLauncher
 		Pd.audio = new PdAudioOpenAL();
 
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		
+		config.width = 480;
+		config.height = 640;
 		new LwjglApplication(new RainstickApplication(){
 			@Override
 			public void create() {
