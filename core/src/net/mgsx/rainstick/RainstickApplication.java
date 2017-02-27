@@ -8,6 +8,7 @@ import net.mgsx.game.core.GameRegistry;
 import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.core.screen.ScreenClip;
 import net.mgsx.game.core.screen.Transitions;
+import net.mgsx.rainstick.screens.RainstickIntroScreen;
 
 /**
  * Rainstick application is made of 2 screens : 
@@ -24,12 +25,14 @@ public class RainstickApplication extends GameApplication
 	{
 		super.create();
 		
+		RainstickIntroScreen rainstickIntroScreen = new RainstickIntroScreen(assets);
+		
 		// create registry based on RainstickPlugin configuration
 		GameRegistry registry = new GameRegistry();
 		registry.registerPlugin(new RainStickPlugin());
 		
 		// create default rainstick screen (loading default rainstick data)
-		GameScreen rainstickScreen = new GameScreen(assets, registry);
+		GameScreen rainstickScreen = new GameScreen(this, assets, registry);
 		
 		rainstickScreen.load(Gdx.files.internal("rainstick-default.json"));
 		
@@ -42,6 +45,7 @@ public class RainstickApplication extends GameApplication
 		// add transition (fade) from loading screen to rainstickScreen
 		// loading screen is splash screen with minimum timeout of 2 seconds.
 		setScreen(Transitions.loader(assets, Transitions.timeout(splashScreen, 2)));
-		addTransition(Transitions.fade(rainstickScreen, 0.3f));
+		addTransition(Transitions.fade(Transitions.timeout(rainstickIntroScreen, 2), 0.3f));
+		addTransition(Transitions.fade(rainstickScreen, 2.3f));
 	}
 }
