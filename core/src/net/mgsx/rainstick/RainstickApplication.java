@@ -8,6 +8,7 @@ import net.mgsx.game.core.GameRegistry;
 import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.core.screen.ScreenClip;
 import net.mgsx.game.core.screen.Transitions;
+import net.mgsx.rainstick.model.Rainstick;
 import net.mgsx.rainstick.screens.RainstickIntroScreen;
 
 /**
@@ -20,12 +21,14 @@ import net.mgsx.rainstick.screens.RainstickIntroScreen;
  */
 public class RainstickApplication extends GameApplication
 {
+	private final Rainstick currentRainstick = new Rainstick();
+	
 	@Override
 	public void create() 
 	{
 		super.create();
 		
-		RainstickIntroScreen rainstickIntroScreen = new RainstickIntroScreen(assets);
+		RainstickIntroScreen rainstickIntroScreen = new RainstickIntroScreen(currentRainstick, assets);
 		
 		// create registry based on RainstickPlugin configuration
 		GameRegistry registry = new GameRegistry();
