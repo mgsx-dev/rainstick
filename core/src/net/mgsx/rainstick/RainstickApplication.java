@@ -81,8 +81,8 @@ public class RainstickApplication extends GameApplication
 				
 		rainstickScreen.load(Gdx.files.internal(rainstick.path));
 		
-		setTransition(Transitions.fade(Transitions.loader(assets, introScreen), 1.5f));
-		addTransition(Transitions.fade(Transitions.timeout(rainstickScreen, 2), 2.3f));
+		setTransition(Transitions.fade(Transitions.loader(assets, Transitions.timeout(introScreen, 2)), 1.5f));
+		addTransition(Transitions.fade(rainstickScreen, 2.3f));
 	}
 	
 	public void showMenu()
