@@ -7,10 +7,9 @@ import net.mgsx.gdx.pd.PdAudioOpenAL;
 import net.mgsx.pd.Pd;
 import net.mgsx.pd.PdConfiguration;
 import net.mgsx.rainstick.RainstickApplication;
-import net.mgsx.rainstick.model.Rainstick;
-import net.mgsx.rainstick.screens.RainstickIntroScreen;
+import net.mgsx.rainstick.screens.RainstickSplashScreen;
 
-public class RainstickIntroTest {
+public class RainstickSplashTest {
 
 	public static void main (String[] args) 
 	{
@@ -24,12 +23,8 @@ public class RainstickIntroTest {
 			public void create() {
 				Pd.audio.create(new PdConfiguration());
 				super.create();
-				Rainstick rainstick = new Rainstick();
-				rainstick.title = "Winter Quadratics";
-				rainstick.credits = "by DarkAng3l";
-				RainstickIntroScreen screen = new RainstickIntroScreen(assets);
+				RainstickSplashScreen screen = new RainstickSplashScreen(assets);
 				assets.finishLoading();
-				screen.setRainstick(rainstick);
 				setScreen(screen);
 			}
 		}, config);
