@@ -22,6 +22,7 @@ import net.mgsx.game.core.annotations.Storable;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.listeners.Box2DEntityListener;
 import net.mgsx.pd.Pd;
+import net.mgsx.pd.patch.PdPatch;
 import net.mgsx.rainstick.components.Ball;
 import net.mgsx.rainstick.components.ImpactComponent;
 import net.mgsx.rainstick.components.Resonator;
@@ -76,6 +77,8 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	};
 	protected GameScreen game;
 	
+	private transient PdPatch patch;
+	
 	public ResonatorPhysicSystem(GameScreen game) {
 		super(Family.all(Ball.class, Box2DBodyModel.class).get(), GamePipeline.AFTER_PHYSICS);
 		this.game = game;
@@ -88,7 +91,8 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	{
 		balls = engine.getEntitiesFor(getFamily());
 		// TODO dispose when finished !
-		Pd.audio.open(Gdx.files.internal("pd/engine.pd"));
+		// TODO use assets injection instead ...
+		patch = Pd.audio.open(Gdx.files.internal("pd/engine.pd"));
 		sendFormants();
 		
 		super.addedToEngine(engine);
@@ -129,6 +133,12 @@ public class ResonatorPhysicSystem extends IteratingSystem
 				});
 			}
 		});
+	}
+	
+	@Override
+	public void removedFromEngine(Engine engine) {
+		patch.dispose();
+		super.removedFromEngine(engine);
 	}
 	
 	
