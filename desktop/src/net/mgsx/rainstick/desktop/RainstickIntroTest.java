@@ -7,9 +7,11 @@ import net.mgsx.gdx.pd.PdAudioOpenAL;
 import net.mgsx.pd.Pd;
 import net.mgsx.pd.PdConfiguration;
 import net.mgsx.rainstick.RainstickApplication;
+import net.mgsx.rainstick.model.Rainstick;
+import net.mgsx.rainstick.screens.RainstickIntroScreen;
 
-public class DesktopLauncher 
-{
+public class RainstickIntroTest {
+
 	public static void main (String[] args) 
 	{
 		Pd.audio = new PdAudioOpenAL();
@@ -22,6 +24,13 @@ public class DesktopLauncher
 			public void create() {
 				Pd.audio.create(new PdConfiguration());
 				super.create();
+				Rainstick rainstick = new Rainstick();
+				rainstick.title = "Winter Quadratics";
+				rainstick.credits = "by DarkAng3l";
+				RainstickIntroScreen screen = new RainstickIntroScreen(assets);
+				assets.finishLoading();
+				screen.setRainstick(rainstick);
+				setScreen(screen);
 			}
 		}, config);
 	}

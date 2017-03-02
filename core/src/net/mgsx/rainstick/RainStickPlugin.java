@@ -1,5 +1,10 @@
 package net.mgsx.rainstick;
 
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGeneratorLoader;
+import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader;
+
 import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.core.annotations.PluginDef;
 import net.mgsx.game.core.plugins.Plugin;
@@ -27,6 +32,9 @@ public class RainStickPlugin implements Plugin, DefaultPlugin
 	@Override
 	public void initialize(GameScreen engine) 
 	{
+		engine.assets.setLoader(FreeTypeFontGenerator.class, new FreeTypeFontGeneratorLoader(engine.assets.getFileHandleResolver()));
+		engine.assets.setLoader(BitmapFont.class, ".ttf", new FreetypeFontLoader(engine.assets.getFileHandleResolver()));
+		
 		engine.entityEngine.addSystem(new ResonatorPhysicSystem(engine));
 		
 		engine.entityEngine.addSystem(new ImpactUpdate());

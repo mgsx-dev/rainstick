@@ -1,0 +1,20 @@
+[
+	{
+		title: "My Rainstick"
+		credits: "by Rainstick maker"
+		path: rainstick-hexa.json
+		preview: rainstick-hexa.png
+	}
+	{
+		title: "My Rainstick 2"
+		credits: "by Rainstick maker"
+		path: rainstick-hexa.json
+		preview: rainstick-hexa.png
+	}
+	{
+		title: "My Rainstick 3"
+		credits: "by Rainstick maker"
+		path: rainstick-hexa.json
+		preview: rainstick-hexa.png
+	}
+]
