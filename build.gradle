@@ -23,7 +23,7 @@ allprojects {
         ashleyVersion = '1.7.0'
         aiVersion = '1.8.0'
         kitVersion = '0.0.2-SNAPSHOT'
-        pdVersion = '0.5.0-SNAPSHOT'
+        pdVersion = '0.6.0-SNAPSHOT'
     }
 
     repositories {
@@ -59,18 +59,21 @@ project(":android") {
 
     dependencies {
         compile project(":core")
+        
         compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
+        
         compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-armeabi"
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-armeabi-v7a"
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-arm64-v8a"
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
+        
         compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi"
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
@@ -79,7 +82,11 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
         
         compile "net.mgsx.gdx:gdx-pd-backend-android:$pdVersion"
-        natives "net.mgsx.gdx:gdx-pd-platform:$pdVersion:natives-android"
+        natives "net.mgsx.gdx:gdx-pd-platform:$pdVersion:natives-armeabi"
+        natives "net.mgsx.gdx:gdx-pd-platform:$pdVersion:natives-armeabi-v7a"
+        natives "net.mgsx.gdx:gdx-pd-platform:$pdVersion:natives-arm64-v8a"
+        natives "net.mgsx.gdx:gdx-pd-platform:$pdVersion:natives-x86"
+        natives "net.mgsx.gdx:gdx-pd-platform:$pdVersion:natives-x86_64"
         
     }
 }
