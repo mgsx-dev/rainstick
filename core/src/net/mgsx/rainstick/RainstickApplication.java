@@ -69,13 +69,7 @@ public class RainstickApplication extends GameApplication
 			@Override
 			public void render(float delta) {
 				super.render(delta);
-				if(Gdx.input.isCatchBackKey()){
-					if(Gdx.input.isKeyPressed(Input.Keys.BACK))
-						showMenu();
-				}
-				else if(Gdx.input.isKeyPressed(Input.Keys.BACKSPACE)){
-					showMenu();
-				}
+				if(Gdx.input.isKeyPressed(Input.Keys.BACK)) showMenu();
 			}
 			@Override
 			public void hide() {
