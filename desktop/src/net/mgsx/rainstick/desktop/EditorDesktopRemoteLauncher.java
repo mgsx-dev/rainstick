@@ -12,6 +12,7 @@ import net.mgsx.kit.files.DesktopNativeInterface;
 import net.mgsx.pd.Pd;
 import net.mgsx.pd.PdConfiguration;
 import net.mgsx.pd.audio.PdAudioRemote;
+import net.mgsx.pd.midi.PdMidiRemote;
 import net.mgsx.rainstick.RainStickEditorPlugin;
 
 public class EditorDesktopRemoteLauncher {
@@ -30,6 +31,7 @@ public class EditorDesktopRemoteLauncher {
 		// set no Pd audio by default to allow running Pd and game at the same time.
 		// all real audio implementations (java or openAL) will lock audio.
 		Pd.audio = new PdAudioRemote();
+		Pd.midi = PdMidiRemote.createDefaultUnicast();
 		LwjglApplicationConfiguration.disableAudio = true;
 
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
