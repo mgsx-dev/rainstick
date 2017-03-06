@@ -152,8 +152,7 @@ public class ResonatorPhysicSystem extends IteratingSystem
 				for(int j=0 ; j<2 && j<a.size ; j++){
 					Impact i = a.get(j);
 					
-					// TODO sendList doesn't work ...
-					Pd.audio.sendMessage("impact", "impact", i.material, i.mass, i.velocity, i.x);
+					Pd.audio.sendList("impact", i.material, i.mass, i.velocity, i.x);
 					
 					// create particles
 					createParticle(i.position, i.mass * i.velocity * i.velocity, i.material);
@@ -188,9 +187,9 @@ public class ResonatorPhysicSystem extends IteratingSystem
 			position += pos;
 			total++;
 		}
-		Pd.audio.sendMessage("ambient", "ambient", 
+		Pd.audio.sendList("ambient", 
 				totalEnergy / energyMax, 
-				totalEnergy > 0 ? (position / total) : 0, 0); // FIXME add zero to workaround OSC padding bug
+				totalEnergy > 0 ? (position / total) : 0, 0);
 	}
 	
 	@Override
