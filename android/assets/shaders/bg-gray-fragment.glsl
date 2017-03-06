@@ -22,7 +22,7 @@ void main() {
     float f = sin(color.r * 100.0 /*+ u_time * 0.5*/);
     float c;
     if(f < 0.0) c = 0.0;
-    else c = 0.05 + 0.015 * (sin(u_time/3)+1.0);
+    else c = 0.05 + 0.015 * (sin(u_time/3.0)+1.0);
 
     gl_FragColor = vec4(c,c,c, 1.0);
 }
