@@ -12,6 +12,7 @@ import net.mgsx.kit.config.ReflectionClassRegistry;
 import net.mgsx.kit.files.DesktopNativeInterface;
 import net.mgsx.pd.Pd;
 import net.mgsx.pd.PdConfiguration;
+import net.mgsx.pd.midi.DefaultPdMidi;
 import net.mgsx.rainstick.RainStickEditorPlugin;
 
 public class EditorDesktopLauncher {
@@ -28,6 +29,7 @@ public class EditorDesktopLauncher {
 		NativeService.instance = nativeService; 
 		
 		Pd.audio = new PdAudioOpenAL();
+		Pd.midi = new DefaultPdMidi();
 
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 
