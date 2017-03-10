@@ -12,7 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Json;
-import com.badlogic.gdx.utils.viewport.FillViewport;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import net.mgsx.game.core.screen.StageScreen;
 import net.mgsx.rainstick.RainstickApplication;
@@ -26,7 +26,7 @@ public class RainstickSelectorScreen extends StageScreen
 	
 	public RainstickSelectorScreen(RainstickApplication screenManager, AssetManager assets) {
 		super(null);
-		stage.setViewport(new FillViewport(1480, 1640));
+		stage.setViewport(new ExtendViewport(1080, 1920));
 		this.assets = assets;
 		this.screenManager = screenManager;
 		

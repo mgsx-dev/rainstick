@@ -11,9 +11,10 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import net.mgsx.game.core.screen.StageScreen;
+import net.mgsx.rainstick.RainstickApplication;
 
 public class RainstickSplashScreen extends StageScreen
 {
@@ -22,7 +23,7 @@ public class RainstickSplashScreen extends StageScreen
 	public RainstickSplashScreen(AssetManager assets) {
 		super(null);
 		this.assets = assets;
-		stage.setViewport(new FitViewport(480, 640));
+		stage.setViewport(new ExtendViewport(RainstickApplication.ViewportWorldWidth, RainstickApplication.ViewportWorldHeight));
 		
 		FreeTypeFontLoaderParameter p = new FreeTypeFontLoaderParameter();
 		p.fontParameters.size = 120;

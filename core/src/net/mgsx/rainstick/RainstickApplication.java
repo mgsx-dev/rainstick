@@ -27,6 +27,9 @@ import net.mgsx.rainstick.screens.RainstickSplashScreen;
  */
 public class RainstickApplication extends GameApplication
 {
+	public static final float ViewportWorldWidth = 480;
+	public static final float ViewportWorldHeight = 640;
+	
 	private RainstickSplashScreen splashScreen;
 	private RainstickSelectorScreen selectorScreen;
 	private RainstickIntroScreen introScreen;

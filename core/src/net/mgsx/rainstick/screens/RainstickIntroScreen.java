@@ -16,6 +16,7 @@ import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import net.mgsx.game.core.screen.StageScreen;
+import net.mgsx.rainstick.RainstickApplication;
 import net.mgsx.rainstick.model.Rainstick;
 
 public class RainstickIntroScreen extends StageScreen
@@ -26,7 +27,7 @@ public class RainstickIntroScreen extends StageScreen
 	public RainstickIntroScreen(AssetManager assets) {
 		super(null);
 		this.assets = assets;
-		this.stage.setViewport(new ExtendViewport(480, 640));
+		this.stage.setViewport(new ExtendViewport(RainstickApplication.ViewportWorldWidth, RainstickApplication.ViewportWorldHeight));
 		FreeTypeFontLoaderParameter p = new FreeTypeFontLoaderParameter();
 		p.fontParameters.size = 60;
 		p.fontFileName = "anchor-steam-nf/AnchorSteamNF.ttf";
