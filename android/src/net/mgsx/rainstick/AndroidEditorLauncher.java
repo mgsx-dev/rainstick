@@ -7,18 +7,13 @@ import android.os.Bundle;
 import net.mgsx.game.core.EditorApplication;
 import net.mgsx.game.core.EditorConfiguration;
 import net.mgsx.pd.Pd;
-import net.mgsx.pd.PdAudioAndroid;
 import net.mgsx.pd.PdConfiguration;
-import net.mgsx.pd.midi.DefaultPdMidi;
 
 public class AndroidEditorLauncher extends AndroidApplication {
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
-		
-		Pd.audio = new PdAudioAndroid(this);
-		Pd.midi = new DefaultPdMidi();
 		
 		EditorConfiguration editConfig = new EditorConfiguration();
 		editConfig.plugins.add(new RainStickEditorPlugin());

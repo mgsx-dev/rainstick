@@ -7,12 +7,10 @@ import net.mgsx.game.core.EditorApplication;
 import net.mgsx.game.core.EditorConfiguration;
 import net.mgsx.game.core.helpers.NativeService;
 import net.mgsx.game.core.meta.ClassRegistry;
-import net.mgsx.gdx.pd.PdAudioOpenAL;
 import net.mgsx.kit.config.ReflectionClassRegistry;
 import net.mgsx.kit.files.DesktopNativeInterface;
 import net.mgsx.pd.Pd;
 import net.mgsx.pd.PdConfiguration;
-import net.mgsx.pd.midi.DefaultPdMidi;
 import net.mgsx.rainstick.RainStickEditorPlugin;
 
 public class EditorDesktopLauncher {
@@ -28,11 +26,7 @@ public class EditorDesktopLauncher {
 		DesktopNativeInterface nativeService = new DesktopNativeInterface(); 
 		NativeService.instance = nativeService; 
 		
-		Pd.audio = new PdAudioOpenAL();
-		Pd.midi = new DefaultPdMidi();
-
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-
 		
 		EditorConfiguration editConfig = new EditorConfiguration();
 		editConfig.plugins.add(new RainStickEditorPlugin());

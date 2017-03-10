@@ -12,6 +12,8 @@ import net.mgsx.game.core.GameApplication;
 import net.mgsx.game.core.GameRegistry;
 import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.core.screen.Transitions;
+import net.mgsx.pd.Pd;
+import net.mgsx.pd.PdConfiguration;
 import net.mgsx.rainstick.model.Rainstick;
 import net.mgsx.rainstick.screens.RainstickIntroScreen;
 import net.mgsx.rainstick.screens.RainstickSelectorScreen;
@@ -38,6 +40,8 @@ public class RainstickApplication extends GameApplication
 	public void create() 
 	{
 		super.create();
+		
+		Pd.audio.create(new PdConfiguration());
 		
 		// TODO register loader where ?
 		assets.setLoader(FreeTypeFontGenerator.class, new FreeTypeFontGeneratorLoader(assets.getFileHandleResolver()));
