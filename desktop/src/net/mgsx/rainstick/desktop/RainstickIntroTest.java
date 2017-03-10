@@ -27,6 +27,7 @@ public class RainstickIntroTest {
 				Rainstick rainstick = new Rainstick();
 				rainstick.title = "Winter Quadratics";
 				rainstick.credits = "by DarkAng3l";
+				rainstick.description = "This is a placeholder for a short description.\nOr some hints about how it works...\nOr better something poetic about it.";
 				RainstickIntroScreen screen = new RainstickIntroScreen(assets);
 				assets.finishLoading();
 				screen.setRainstick(rainstick);

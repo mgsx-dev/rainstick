@@ -4,17 +4,20 @@
 		credits: "by Rainstick maker"
 		path: rainstick-hexa.json
 		preview: rainstick-hexa.png
+		description: "This is my first rainstick, it is simple but it works great!"
 	}
 	{
 		title: "My Rainstick 2"
 		credits: "by Rainstick maker"
 		path: rainstick-hexa.json
 		preview: rainstick-hexa.png
+		description: "Touch the screen in order to shape the sound!"
 	}
 	{
 		title: "My Rainstick 3"
 		credits: "by Rainstick maker"
 		path: rainstick-hexa.json
 		preview: rainstick-hexa.png
+		description: "This is a placeholder for a short description.\nOr some hints about how it works...\nOr better something poetic about it."
 	}
 ]

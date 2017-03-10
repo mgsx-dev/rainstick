@@ -13,6 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import net.mgsx.game.core.screen.StageScreen;
 import net.mgsx.rainstick.model.Rainstick;
@@ -25,6 +26,7 @@ public class RainstickIntroScreen extends StageScreen
 	public RainstickIntroScreen(AssetManager assets) {
 		super(null);
 		this.assets = assets;
+		this.stage.setViewport(new ExtendViewport(480, 640));
 		FreeTypeFontLoaderParameter p = new FreeTypeFontLoaderParameter();
 		p.fontParameters.size = 60;
 		p.fontFileName = "anchor-steam-nf/AnchorSteamNF.ttf";
@@ -56,11 +58,20 @@ public class RainstickIntroScreen extends StageScreen
 		
 		style = new LabelStyle();
 		style.font = font;
+		style.fontColor = Color.WHITE;
+		label = new Label(rainstick.description, style);
+		label.setAlignment(Align.center);
+		g = new Table();
+		g.add(label).pad(30).expand().fill();
+		main.add(g).row();
+		
+		style = new LabelStyle();
+		style.font = font;
 		style.fontColor = Color.GRAY;
 		label = new Label(rainstick.credits, style);
 		g = new Table();
 		g.add(label).pad(30).expand().fill();
-		main.add(g).expand().right();
+		main.add(g).expand().right().row();
 		
 		getStage().addActor(main);
 		
