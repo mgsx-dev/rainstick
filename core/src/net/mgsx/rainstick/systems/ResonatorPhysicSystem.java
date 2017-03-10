@@ -58,11 +58,11 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	public float velMin = 1, velMax = 10;
 	
 	@Editable
-	public float f1 = 359, f2= 426,f3= 1748,f4= 3000 , q=1000, gain = 10 ;
+	public float pitch = 48, tone= 0,resonance= 250 ;
 	
 	@Editable
 	public void sendFormants (){
-		Pd.audio.sendList("kit-formants", f1,f2,f3,f4,q,gain);
+		Pd.audio.sendList("kit-params", pitch, tone, resonance);
 	}
 	
 	@Editable
