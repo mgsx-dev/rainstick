@@ -56,17 +56,25 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	public float massMin = 1, massMax = 10;
 	@Editable
 	public float velMin = 1, velMax = 10;
+	@Editable
+	public float energyMax = 16;
 	
 	@Editable
 	public float pitch = 48, tone= 0,resonance= 250 ;
+	@Editable
+	public float mix_ambiant_dry = 20, mix_ambiant_wet= 32,mix_ball_dry= 27 , mix_ball_wet = 70, mix_wall_dry = 25, mix_wall_wet = 80;
+	
+	
 	
 	@Editable
 	public void sendFormants (){
 		Pd.audio.sendList("kit-params", pitch, tone, resonance);
 	}
-	
 	@Editable
-	public float energyMax = 16;
+	public void sendMix(){
+		Pd.audio.sendList("kit-mix", mix_ambiant_dry, mix_ambiant_wet, mix_ball_dry, mix_ball_wet, mix_wall_dry, mix_wall_wet);		
+	}
+	
 	
 	private Array<Array<Impact>> impacts = new Array<Array<Impact>>();
 	private Pool<Impact> pool = new Pool<Impact>(){
@@ -145,6 +153,9 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	@Override
 	public void update(float deltaTime) {
 		super.update(deltaTime);
+		
+		//this.pitch = ((float)Gdx.input.getX() / Gdx.graphics.getWidth())*48+36;
+		//sendFormants();
 		
 		for(Array<Impact> a : impacts){
 			if(a.size > 0){
