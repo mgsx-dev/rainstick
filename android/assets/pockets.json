@@ -1,0 +1,3311 @@
+{
+entities: [
+	{
+		id: 0
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -4.3216643
+					y: 10.113412
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{
+									x: 8.482054
+									y: 0.20166683
+								}
+								{
+									x: 7.011261
+									y: 0.14122963
+								}
+								{
+									x: 5.9233456
+									y: -0.44302368
+								}
+								{
+									x: 5.721884
+									y: -1.692111
+								}
+								{
+									x: 6.5478725
+									y: -2.5584235
+								}
+								{
+									x: 7.667019
+									y: -2.888195
+								}
+								{
+									x: 5.2585154
+									y: -4.2910376
+								}
+								{
+									x: 3.626616
+									y: -5.0364594
+								}
+								{
+									x: 1.2291548
+									y: -5.5199804
+								}
+								{
+									x: -0.67833567
+									y: -6.113412
+								}
+								{
+									x: -2.0186357
+									y: -6.899708
+								}
+								{
+									x: -2.7930045
+									y: -8.100008
+								}
+								{
+									x: -2.7736478
+									y: -10.1327715
+								}
+								{
+									x: -1.9412513
+									y: -12.030018
+								}
+								{
+									x: -0.16098356
+									y: -12.974236
+								}
+								{
+									x: 1.5716455
+									y: -13.699518
+								}
+								{
+									x: 2.6192734
+									y: -14.113412
+								}
+								{
+									x: 4.3518863
+									y: -14.34421
+								}
+								{
+									x: 6.5680237
+									y: -14.868021
+								}
+								{
+									x: 8.372454
+									y: -15.863657
+								}
+								{
+									x: 7.2933593
+									y: -16.459612
+								}
+								{
+									x: 6.7897124
+									y: -16.902843
+								}
+								{
+									x: 6.628502
+									y: -17.648285
+								}
+								{
+									x: 6.7895775
+									y: -18.73619
+								}
+								{
+									x: 7.8372335
+									y: -19.803951
+								}
+								{
+									x: 9.489166
+									y: -20.388176
+								}
+								{
+									x: 10.980047
+									y: -19.56216
+								}
+								{
+									x: 11.503927
+									y: -18.292946
+								}
+								{
+									x: 11.141331
+									y: -17.02368
+								}
+								{
+									x: 10.073558
+									y: -15.411964
+								}
+								{
+									x: 8.784197
+									y: -14.565796
+								}
+								{
+									x: 4.1827235
+									y: -13.426748
+								}
+								{
+									x: 6.961633
+									y: -13.148861
+								}
+								{
+									x: 9.751184
+									y: -11.342346
+								}
+								{
+									x: 9.892219
+									y: -9.126218
+								}
+								{
+									x: 8.68343
+									y: -7.2122893
+								}
+								{
+									x: 6.876109
+									y: -5.752627
+								}
+								{
+									x: 4.65298
+									y: -5.4961166
+								}
+								{
+									x: 8.3409195
+									y: -3.7067857
+								}
+								{
+									x: 9.831754
+									y: -3.1628203
+								}
+								{
+									x: 10.677901
+									y: -2.2763615
+								}
+								{
+									x: 10.818939
+									y: -1.4301949
+								}
+								{
+									x: 10.113819
+									y: -0.36243343
+								}
+							]
+						}
+						restitution: 0.36727694
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.resonator: {
+			material: 63
+		}
+	}
+	{
+		id: 1
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -3.7837284
+					y: 2.910569
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.7941448
+						}
+						restitution: 0.7124334
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 55
+		}
+	}
+	{
+		id: 2
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -1.1219476
+					y: 3.221676
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.7941448
+						}
+						restitution: 0.7124334
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 55
+		}
+	}
+	{
+		id: 3
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: 1.5771475
+					y: 2.9241025
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.7941448
+						}
+						restitution: 0.7124334
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 55
+		}
+	}
+	{
+		id: 4
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -3.892031
+					y: -1.6921852
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.7941448
+						}
+						restitution: 0.7124334
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 54
+		}
+	}
+	{
+		id: 5
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -1.1470183
+					y: -1.9430236
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.7941448
+						}
+						restitution: 0.7124334
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 54
+		}
+	}
+	{
+		id: 6
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: 1.5906903
+					y: -1.6380404
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.7941448
+						}
+						restitution: 0.7124334
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 54
+		}
+	}
+	{
+		id: 7
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -5.2262387
+					y: 1.539772
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 52
+		}
+	}
+	{
+		id: 8
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: 2.820611
+					y: 1.6044922
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 52
+		}
+	}
+	{
+		id: 9
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: 0.25072098
+					y: 1.6044922
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 52
+		}
+	}
+	{
+		id: 10
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -2.5197458
+					y: 1.5418167
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 52
+		}
+	}
+	{
+		id: 11
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -5.276383
+					y: -0.36556244
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 53
+		}
+	}
+	{
+		id: 12
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: 0.20057678
+					y: -0.3008423
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 53
+		}
+	}
+	{
+		id: 13
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -2.56989
+					y: -0.36351776
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 53
+		}
+	}
+	{
+		id: 14
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: 2.7704668
+					y: -0.3008423
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 53
+		}
+	}
+	{
+		id: 15
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -3.9224896
+					y: 0.67485046
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 57
+		}
+	}
+	{
+		id: 16
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: 1.5544701
+					y: 0.7395706
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 57
+		}
+	}
+	{
+		id: 17
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -1.2159967
+					y: 0.67689514
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 59
+		}
+	}
+	{
+		id: 18
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: 4.1806626
+					y: 0.7020002
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 57
+		}
+	}
+	{
+		id: 19
+		box2d: {
+			id: Circle
+			def: {
+				position: {
+					x: -6.186376
+					y: 0.67693
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.28461006
+						}
+						restitution: 0.81081617
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 57
+		}
+	}
+	{
+		id: 20
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.6825514
+					y: 9.635285
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 21
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.1949732
+					y: 9.635285
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 22
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.707395
+					y: 9.635285
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 23
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.219817
+					y: 9.635285
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 24
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.732239
+					y: 9.635285
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 25
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.6825514
+					y: 9.271772
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 26
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.1949732
+					y: 9.271772
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 27
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.707395
+					y: 9.271772
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 28
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.219817
+					y: 9.271772
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 29
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.732239
+					y: 9.271772
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 30
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.6825514
+					y: 8.908259
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 31
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.1949732
+					y: 8.908259
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 32
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.707395
+					y: 8.908259
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 33
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.219817
+					y: 8.908259
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 34
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.732239
+					y: 8.908259
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 35
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.6825514
+					y: 8.544746
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 36
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.1949732
+					y: 8.544746
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 37
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.707395
+					y: 8.544746
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 38
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.219817
+					y: 8.544746
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 39
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.732239
+					y: 8.544746
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 40
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.6825514
+					y: 8.181233
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 41
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.1949732
+					y: 8.181233
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 42
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.707395
+					y: 8.181233
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 43
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.219817
+					y: 8.181233
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 44
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.732239
+					y: 8.181233
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 45
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9015348
+					y: 9.919964
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 46
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.273807
+					y: 9.919964
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 47
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6460795
+					y: 9.919964
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 48
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.018352
+					y: 9.919964
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 49
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.390624
+					y: 9.919964
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 50
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9015348
+					y: 9.556451
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 51
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.273807
+					y: 9.556451
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 52
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6460795
+					y: 9.556451
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 53
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.018352
+					y: 9.556451
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 54
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.390624
+					y: 9.556451
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 55
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9015348
+					y: 9.192938
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 56
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.273807
+					y: 9.192938
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 57
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6460795
+					y: 9.192938
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 58
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.018352
+					y: 9.192938
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 59
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.390624
+					y: 9.192938
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 60
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9015348
+					y: 8.829425
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 61
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.273807
+					y: 8.829425
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 62
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6460795
+					y: 8.829425
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 63
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.018352
+					y: 8.829425
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 64
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.390624
+					y: 8.829425
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 65
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9015348
+					y: 8.465912
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 66
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.273807
+					y: 8.465912
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 67
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6460795
+					y: 8.465912
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 68
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.018352
+					y: 8.465912
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 69
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.390624
+					y: 8.465912
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 70
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9234324
+					y: 9.83237
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 71
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.304464
+					y: 9.83237
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 72
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6854959
+					y: 9.83237
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 73
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.0665274
+					y: 9.83237
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 74
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.4475594
+					y: 9.83237
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 75
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9234324
+					y: 9.464478
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 76
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.304464
+					y: 9.464478
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 77
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6854959
+					y: 9.464478
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 78
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.0665274
+					y: 9.464478
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 79
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.4475594
+					y: 9.464478
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 80
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9234324
+					y: 9.096584
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 81
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.304464
+					y: 9.096584
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 82
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6854959
+					y: 9.096584
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 83
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.0665274
+					y: 9.096584
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 84
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.4475594
+					y: 9.096584
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 85
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9234324
+					y: 8.728692
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 86
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.304464
+					y: 8.728692
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 87
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6854959
+					y: 8.728692
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 88
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.0665274
+					y: 8.728692
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 89
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.4475594
+					y: 8.728692
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 90
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 2.9234324
+					y: 8.3608
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 91
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.304464
+					y: 8.3608
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 92
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 3.6854959
+					y: 8.3608
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 93
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.0665274
+					y: 8.3608
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 94
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: 4.4475594
+					y: 8.3608
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 0.14606743
+						}
+						restitution: 0.12942435
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {
+			radius: 0.14606743
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+]
+systems: [
+	{
+		type: rainstick.gravity
+		enabled: false
+		rotationSpeed: 12.158204
+		gravityScale: 3.5361605
+	}
+	{
+		type: box2d.world
+		enabled: true
+		runSimulation: true
+		gravity: {
+			x: 0.09523081
+			y: 3.534878
+		}
+		timeStep: 0.04249719
+		velocityIterations: 11
+		positionIterations: 6
+	}
+	{
+		type: rainstick.resonator-system
+		enabled: true
+		stereoClusteringSteps: 2
+		stereoMin: -6.300196
+		stereoMax: 7.661565
+		massMin: 0
+		massMax: 1
+		velMin: 0
+		velMax: 7.4786787
+		energyMax: 16
+		pitch: 60.319927
+		tone: 0.5
+		resonance: 105
+		mix_ambiant_dry: 20
+		mix_ambiant_wet: 32
+		mix_ball_dry: 31.59059
+		mix_ball_wet: 45.319855
+		mix_wall_dry: 41.695454
+		mix_wall_wet: 97.18776
+	}
+	{
+		type: rainstick.calibration
+		enabled: true
+		velMax: 7.000185
+		massMax: 1
+		xMin: -6.9627085
+		xMax: 7.029588
+		run: true
+	}
+	{
+		type: rainstick.impact.update
+		enabled: true
+		lifeMax: 0.70857775
+	}
+	{
+		type: core.clearScreen
+		enabled: true
+		color: {
+			a: 1
+		}
+		clearColor: true
+		clearDepth: true
+	}
+	{
+		type: g3d.rendering
+		enabled: true
+		shadowQuality: 10
+		shadowSize: {
+			x: 50
+			y: 50
+		}
+		shadowNear: 0.1
+		shadowFar: 100
+		ambient: {
+			r: 0.4
+			g: 0.4
+			b: 0.4
+			a: 1
+		}
+	}
+	{
+		type: rainstick.background
+		enabled: true
+		scale: 1.09547
+		texScale: 0.1757599
+		shader: {
+			vertex: shaders/bg-vertex.glsl
+			fragment: shaders/bg-marble-fragment.glsl
+		}
+	}
+	{
+		type: rainstick.impact.render
+		enabled: true
+		shader: {
+			vertex: shaders/impact-vertex.glsl
+			fragment: shaders/impact-fragment.glsl
+		}
+		scale: 31.621498
+	}
+	{
+		type: g2d.render
+		enabled: true
+		culling: false
+	}
+]
+views: [
+	box2d.world
+	net.mgsx.game.plugins.core.systems.SelectionRenderSystem
+	rainstick.impact.update
+	rainstick.resonator-system
+	rainstick.impact.render
+	rainstick.background
+	rainstick.calibration
+	rainstick.gravity
+]
+}
