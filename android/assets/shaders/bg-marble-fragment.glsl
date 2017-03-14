@@ -21,8 +21,9 @@ void main() {
 
     float f = abs(color.r - 0.5 /*+ u_time * 0.5*/)*3.0;
     float c;
-    if(f < 0.25) c = 0.0;
-    else c = 0.5 + 0.015 * (sin(u_time/3)+1.0);
-	c = /*1.0-*/ pow(1.0-f,10.0) + c * 0.1;
-    gl_FragColor = vec4(c,c,c	, 1.0);
+    if(f < 0.35) c = 0.15;
+    else if(f > 0.35 && f < 0.75) c = 0.5 + 0.25 * (sin(u_time/3 + 3.14/6.0)+1.0);
+    else c = 0.7 + 0.015 * (sin(u_time/3)+1.0);
+	c = /*1.0-*/ pow(1.0-f,3.0) + c * 0.36;
+    gl_FragColor = vec4(c,c,c, 0.25);
 }
