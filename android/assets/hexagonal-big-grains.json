@@ -1,0 +1,775 @@
+{
+entities: [
+	{
+		id: 0
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -1.5419039
+					y: -4
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{
+									x: 4.541904
+									y: -2
+								}
+								{
+									x: -3.458096
+									y: -2
+								}
+								{
+									x: -6.458096
+									y: 1
+								}
+								{
+									x: -6.458096
+									y: 7
+								}
+								{
+									x: -3.458096
+									y: 10
+								}
+								{
+									x: -0.45809615
+									y: 10
+								}
+								{
+									x: 1.5419039
+									y: 10
+								}
+								{
+									x: 4.541904
+									y: 10
+								}
+								{
+									x: 7.541904
+									y: 7
+								}
+								{
+									x: 7.541904
+									y: 1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.resonator: {
+			material: 48
+		}
+	}
+	{
+		id: 1
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 2
+		rainstick.mask: {}
+	}
+	{
+		id: 3
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -8.472228
+					y: 5.559193
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 55
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 4
+		rainstick.resonator: {
+			material: 67
+		}
+	}
+	{
+		id: 5
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: 3.4467144
+					y: 5.559193
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 54
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 6
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: 3.461538
+					y: -4.5363007
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 55
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 7
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -8.472229
+					y: -4.5214763
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 54
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 8
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -2.4534585
+					y: -6.522792
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 52
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 9
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -2.4979348
+					y: 7.5753326
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 51
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 10
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -1.000655
+					y: 2.994555
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: -2.9726133
+									y: -3.01765
+								}
+								{
+									x: 0.03002584
+									y: -6.005274
+								}
+								{
+									x: 2.9876256
+									y: -2.9876237
+								}
+							]
+						}
+						restitution: 0.924402
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+		rainstick.resonator: {
+			material: 60
+		}
+	}
+	{
+		id: 11
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -9.991961
+					y: 0.5781512
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 52
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 12
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: 5
+					y: 0.20760632
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 51
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 13
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: -4.4096866
+					y: 4.879354
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 1
+						}
+						restitution: 0.11030788
+						density: 0.12816812
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 14
+		box2d: {
+			id: null
+			def: {
+				type: DynamicBody
+				position: {
+					x: -4.401864
+					y: -4.0489535
+				}
+				allowSleep: false
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Circle
+							position: {}
+							radius: 1
+						}
+						restitution: 0.11030788
+						density: 0.12816812
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.ball: {}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+]
+systems: [
+	{
+		type: rainstick.gravity
+		enabled: true
+		rotationSpeed: 12.158204
+		gravityScale: 3.5361605
+	}
+	{
+		type: box2d.world
+		enabled: true
+		runSimulation: true
+		gravity: {
+			x: 3.4007027
+			y: -0.9693565
+		}
+		timeStep: 0.04249719
+		velocityIterations: 11
+		positionIterations: 6
+	}
+	{
+		type: rainstick.resonator-system
+		enabled: true
+		stereoClusteringSteps: 2
+		stereoMin: -10.013129
+		stereoMax: 5
+		massMin: 0
+		massMax: 0.41
+		velMin: 0
+		velMax: 6.7
+		energyMax: 16
+		pitch: 48
+		tone: 0.08614442
+		resonance: 1283.1976
+		mix_ambiant_dry: 20
+		mix_ambiant_wet: 32
+		mix_ball_dry: 20
+		mix_ball_wet: 28.97851
+		mix_wall_dry: 40.70871
+		mix_wall_wet: 96.648705
+	}
+	{
+		type: rainstick.calibration
+		enabled: true
+		velMax: 15.097416
+		massMax: 0.40265203
+		xMin: -9.991961
+		xMax: 5.0061874
+		run: true
+	}
+	{
+		type: rainstick.impact.update
+		enabled: true
+		lifeMax: 0.70857775
+	}
+	{
+		type: core.clearScreen
+		enabled: true
+		color: {
+			a: 1
+		}
+		clearColor: true
+		clearDepth: true
+	}
+	{
+		type: g3d.rendering
+		enabled: true
+		shadowQuality: 10
+		shadowSize: {
+			x: 50
+			y: 50
+		}
+		shadowNear: 0.1
+		shadowFar: 100
+		ambient: {
+			r: 0.4
+			g: 0.4
+			b: 0.4
+			a: 1
+		}
+	}
+	{
+		type: rainstick.background
+		enabled: true
+		scale: 0.014570187
+		texScale: 6.757443E-4
+		shader: {
+			vertex: shaders/bg-vertex.glsl
+			fragment: shaders/bg-gray-fragment.glsl
+		}
+	}
+	{
+		type: rainstick.impact.render
+		enabled: true
+		shader: {
+			vertex: shaders/impact-vertex.glsl
+			fragment: shaders/impact-fragment.glsl
+		}
+		scale: 13.253994
+	}
+	{
+		type: g2d.render
+		enabled: true
+		culling: false
+	}
+]
+views: [
+	box2d.world
+	net.mgsx.game.plugins.core.systems.SelectionRenderSystem
+	rainstick.impact.update
+	rainstick.resonator-system
+	rainstick.impact.render
+	rainstick.background
+	rainstick.calibration
+	rainstick.gravity
+	net.mgsx.game.plugins.core.systems.GridDebugSystem
+]
+}
