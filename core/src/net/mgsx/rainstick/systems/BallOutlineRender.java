@@ -17,7 +17,7 @@ import net.mgsx.game.core.GamePipeline;
 import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.pd.Pd;
-import net.mgsx.pd.events.PdAdapter;
+import net.mgsx.pd.utils.PdAdapter;
 import net.mgsx.rainstick.components.Ball;
 
 public class BallOutlineRender extends IteratingSystem {
