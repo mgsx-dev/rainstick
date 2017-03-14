@@ -482,9 +482,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.12562788
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -515,9 +513,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.1920715
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -548,9 +544,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.1920715
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -581,9 +575,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.1920715
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -614,9 +606,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.1920715
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -647,9 +637,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.10696338
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -680,9 +668,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.10696338
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -713,9 +699,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.10696338
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -746,9 +730,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.10696338
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -779,9 +761,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -812,9 +792,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.10696338
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -845,9 +823,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.10696338
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -878,9 +854,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.10696338
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -911,9 +885,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.10696338
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -944,9 +916,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -977,9 +947,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1010,9 +978,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1043,9 +1009,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1076,9 +1040,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1109,9 +1071,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1142,9 +1102,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1175,9 +1133,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1208,9 +1164,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1264,9 +1218,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1297,9 +1249,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1330,9 +1280,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1386,9 +1334,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1442,9 +1388,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.21037143
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1498,9 +1442,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.12562788
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1554,9 +1496,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.21037143
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1610,9 +1550,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1711,9 +1649,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1767,9 +1703,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1823,9 +1757,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.21037143
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1879,9 +1811,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1935,9 +1865,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1991,9 +1919,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2047,9 +1973,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2103,9 +2027,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2159,9 +2081,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.12562788
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2215,9 +2135,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2271,9 +2189,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.12562788
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2327,9 +2243,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.088261634
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2383,9 +2297,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.21037143
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2402,8 +2314,8 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			x: -3.3464823
-			y: -1.1425792
+			x: -0.53878057
+			y: 3.4948742
 		}
 		timeStep: 0.04249719
 		velocityIterations: 11
@@ -2421,13 +2333,13 @@ systems: [
 		velMax: 13.703952
 		energyMax: 16
 		pitch: 48
-		tone: 1
-		resonance: 1000
+		tone: 0.7935332
+		resonance: 1227.5001
 		mix_ambiant_dry: 20
 		mix_ambiant_wet: 32
-		mix_ball_dry: 20
-		mix_ball_wet: 40
-		mix_wall_dry: 25
+		mix_ball_dry: 16.341784
+		mix_ball_wet: 44.45764
+		mix_wall_dry: 52.221203
 		mix_wall_wet: 80
 	}
 	{
@@ -2504,5 +2416,6 @@ views: [
 	rainstick.background
 	rainstick.calibration
 	rainstick.gravity
+	net.mgsx.game.plugins.core.systems.GridDebugSystem
 ]
 }

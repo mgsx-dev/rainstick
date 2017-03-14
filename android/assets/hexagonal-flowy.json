@@ -67,7 +67,7 @@ entities: [
 		}
 		rainstick.mask: {}
 		rainstick.resonator: {
-			material: 61
+			material: 48
 		}
 	}
 	{
@@ -84,8 +84,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: -8
-					y: 5
+					x: -8.472228
+					y: 5.559193
 				}
 			}
 			fixtures: [
@@ -131,7 +131,7 @@ entities: [
 			]
 		}
 		rainstick.resonator: {
-			material: 63
+			material: 55
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -148,8 +148,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: 3
-					y: 5
+					x: 3.4467144
+					y: 5.559193
 				}
 			}
 			fixtures: [
@@ -195,7 +195,7 @@ entities: [
 			]
 		}
 		rainstick.resonator: {
-			material: 66
+			material: 54
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -206,8 +206,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: 3
-					y: -4
+					x: 3.461538
+					y: -4.5363007
 				}
 			}
 			fixtures: [
@@ -253,7 +253,7 @@ entities: [
 			]
 		}
 		rainstick.resonator: {
-			material: 63
+			material: 55
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -264,8 +264,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: -8
-					y: -4
+					x: -8.472229
+					y: -4.5214763
 				}
 			}
 			fixtures: [
@@ -311,7 +311,7 @@ entities: [
 			]
 		}
 		rainstick.resonator: {
-			material: 66
+			material: 54
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -369,7 +369,7 @@ entities: [
 			]
 		}
 		rainstick.resonator: {
-			material: 65
+			material: 52
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -380,8 +380,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: -2.6348116
-					y: 7
+					x: -2.705478
+					y: 6.9971766
 				}
 			}
 			fixtures: [
@@ -427,7 +427,7 @@ entities: [
 			]
 		}
 		rainstick.resonator: {
-			material: 65
+			material: 51
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -527,9 +527,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -583,9 +581,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -639,9 +635,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -695,9 +689,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -751,9 +743,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -807,9 +797,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -863,9 +851,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -919,9 +905,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -975,9 +959,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1031,9 +1013,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1087,9 +1067,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1143,9 +1121,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1199,9 +1175,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1255,9 +1229,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1311,9 +1283,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1367,9 +1337,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1423,9 +1391,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1479,9 +1445,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1535,9 +1499,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1591,9 +1553,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1647,9 +1607,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1703,9 +1661,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1759,9 +1715,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1815,9 +1769,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1871,9 +1823,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1927,9 +1877,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -1983,9 +1931,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2039,9 +1985,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2095,9 +2039,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2151,9 +2093,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2207,9 +2147,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2263,9 +2201,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2319,9 +2255,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2375,9 +2309,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2431,9 +2363,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2444,8 +2374,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: -4.43451
-					y: 1.5544289
+					x: 2.9003627
+					y: 5.041899
 				}
 				allowSleep: false
 			}
@@ -2487,9 +2417,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2543,9 +2471,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2599,9 +2525,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2655,9 +2579,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2711,9 +2633,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2767,9 +2687,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2823,9 +2741,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2879,9 +2795,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2935,9 +2849,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2991,9 +2903,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3047,9 +2957,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3103,9 +3011,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3159,9 +3065,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3215,9 +3119,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3271,9 +3173,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3327,9 +3227,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3383,9 +3281,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3439,9 +3335,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3495,9 +3389,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3551,9 +3443,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3607,9 +3497,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3663,9 +3551,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3719,9 +3605,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3775,9 +3659,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3831,9 +3713,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3887,9 +3767,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3943,9 +3821,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -3999,9 +3875,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4055,9 +3929,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.109386615
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4111,9 +3983,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4167,9 +4037,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4223,9 +4091,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4279,9 +4145,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4335,9 +4199,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4391,9 +4253,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4447,9 +4307,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4503,9 +4361,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4559,9 +4415,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4615,9 +4469,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4671,9 +4523,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4727,9 +4577,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4783,9 +4631,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4839,9 +4685,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4895,9 +4739,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4951,9 +4793,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.2542255
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5007,9 +4847,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5063,9 +4901,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5119,9 +4955,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5175,9 +5009,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5231,9 +5063,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5287,9 +5117,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5343,9 +5171,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5399,9 +5225,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5455,9 +5279,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5511,9 +5333,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5567,9 +5387,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5623,9 +5441,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5679,9 +5495,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5735,9 +5549,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5791,9 +5603,7 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
-		}
+		rainstick.ball: {}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -5847,8 +5657,122 @@ entities: [
 				}
 			]
 		}
-		rainstick.ball: {
-			radius: 0.19768162
+		rainstick.ball: {}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 107
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: 5
+					y: 0.20760632
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 51
+		}
+		rainstick.mask: {}
+		rainstick.mask-invert: {}
+	}
+	{
+		id: 108
+		box2d: {
+			id: Chain Loop
+			def: {
+				position: {
+					x: -9.991961
+					y: 0.5781512
+				}
+			}
+			fixtures: [
+				{
+					def: {
+						shape: {
+							type: Chain
+							loop: true
+							vertex: [
+								{}
+								{
+									x: 1
+									y: 1
+								}
+								{
+									x: 2
+									y: 1
+								}
+								{
+									x: 3
+								}
+								{
+									x: 3
+									y: -1
+								}
+								{
+									x: 2
+									y: -2
+								}
+								{
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
+								}
+							]
+						}
+						density: 1
+						filter: {}
+					}
+				}
+			]
+		}
+		rainstick.resonator: {
+			material: 52
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -5866,8 +5790,8 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			x: 1.5851521
-			y: 3.1609688
+			x: -1.0651522
+			y: 3.3719256
 		}
 		timeStep: 0.04249719
 		velocityIterations: 11
@@ -5885,22 +5809,22 @@ systems: [
 		velMax: 8.039802
 		energyMax: 16
 		pitch: 48
-		tone: 0.25
-		resonance: 200
+		tone: 0.08614442
+		resonance: 1283.1976
 		mix_ambiant_dry: 20
 		mix_ambiant_wet: 32
 		mix_ball_dry: 20
-		mix_ball_wet: 40
-		mix_wall_dry: 25
-		mix_wall_wet: 80
+		mix_ball_wet: 28.97851
+		mix_wall_dry: 40.70871
+		mix_wall_wet: 96.648705
 	}
 	{
 		type: rainstick.calibration
 		enabled: true
-		velMax: 8.182528
+		velMax: 8.360854
 		massMax: 0.023544323
-		xMin: -8
-		xMax: 5.898989
+		xMin: -11
+		xMax: 6
 		run: true
 	}
 	{
@@ -5968,5 +5892,6 @@ views: [
 	rainstick.background
 	rainstick.calibration
 	rainstick.gravity
+	net.mgsx.game.plugins.core.systems.GridDebugSystem
 ]
 }
