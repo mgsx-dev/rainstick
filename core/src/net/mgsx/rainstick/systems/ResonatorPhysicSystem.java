@@ -102,6 +102,7 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		// TODO use assets injection instead ...
 		patch = Pd.audio.open(Gdx.files.internal("pd/engine.pd"));
 		sendFormants();
+		sendMix();
 		
 		super.addedToEngine(engine);
 		
