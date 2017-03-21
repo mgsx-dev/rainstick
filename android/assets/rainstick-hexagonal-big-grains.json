@@ -668,8 +668,8 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			x: 3.4007027
-			y: -0.9693565
+			x: 2.3879719
+			y: -2.6080685
 		}
 		timeStep: 0.04249719
 		velocityIterations: 11
@@ -687,14 +687,14 @@ systems: [
 		velMax: 6.7
 		energyMax: 16
 		pitch: 48
-		tone: 0.08614442
+		tone: 0.34375286
 		resonance: 1283.1976
 		mix_ambiant_dry: 20
 		mix_ambiant_wet: 32
-		mix_ball_dry: 20
-		mix_ball_wet: 28.97851
-		mix_wall_dry: 40.70871
-		mix_wall_wet: 96.648705
+		mix_ball_dry: 53.64404
+		mix_ball_wet: 34.72097
+		mix_wall_dry: 30.717379
+		mix_wall_wet: 38.67005
 	}
 	{
 		type: rainstick.calibration
@@ -702,7 +702,7 @@ systems: [
 		velMax: 15.097416
 		massMax: 0.40265203
 		xMin: -9.991961
-		xMax: 5.0061874
+		xMax: 5.0062313
 		run: true
 	}
 	{

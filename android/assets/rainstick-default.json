@@ -75,8 +75,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: -0.7411574
-					y: -2.287921
+					x: -0.5076904
+					y: -2.6575518
 				}
 			}
 			fixtures: [
@@ -127,8 +127,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: 0.27711475
-					y: -2.6230733
+					x: 3.4285603
+					y: -3.5350027
 				}
 			}
 			fixtures: [
@@ -139,28 +139,28 @@ entities: [
 							loop: true
 							vertex: [
 								{
-									x: 1.6114093
-									y: 1.7145386
+									x: -0.4695946
+									y: 0.5237272
 								}
 								{
-									x: 1.8803672
-									y: 2.1436036
+									x: -0.20063674
+									y: 0.95279217
 								}
 								{
-									x: 2.0934691
-									y: 1.7173967
+									x: 0.012465239
+									y: 0.52658534
 								}
 								{
-									x: 2.6074386
-									y: 1.7926149
+									x: 0.52643466
+									y: 0.60180354
 								}
 								{
-									x: 2.5007982
-									y: 1.2559061
+									x: 0.41979432
+									y: 0.06509471
 								}
 								{
-									x: 1.8176912
-									y: 0.37608355
+									x: -0.2633127
+									y: -0.8147278
 								}
 							]
 						}
@@ -5570,8 +5570,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: 1
-					y: -0.5864757
+					x: 1.3225228
+					y: 0.11283389
 				}
 			}
 			fixtures: [
@@ -5587,16 +5587,16 @@ entities: [
 									y: 0.80561006
 								}
 								{
-									x: 1.1407326
+									x: 1.1407328
 									y: 2.107482
 								}
 								{
-									x: 1.1020548
-									y: 1.5016577
+									x: 1.3037491
+									y: 1.0905774
 								}
 								{
-									x: 0.6509168
-									y: 1.0118487
+									x: 1
+									y: 0.5891785
 								}
 								{
 									x: 0.7540364
@@ -5629,8 +5629,8 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			x: -0.12513149
-			y: -0.17036594
+			x: -0.16010737
+			y: -0.13801475
 		}
 		timeStep: 0.04249719
 		velocityIterations: 11
@@ -5646,13 +5646,16 @@ systems: [
 		massMax: 0.005448454
 		velMin: 0
 		velMax: 3.7937849
-		f1: 359
-		f2: 426
-		f3: 1748
-		f4: 3000
-		q: 1000
-		gain: 10
 		energyMax: 16
+		pitch: 48
+		tone: 0
+		resonance: 250
+		mix_ambiant_dry: 20
+		mix_ambiant_wet: 32
+		mix_ball_dry: 27
+		mix_ball_wet: 70
+		mix_wall_dry: 25
+		mix_wall_wet: 80
 	}
 	{
 		type: rainstick.calibration

@@ -391,7 +391,7 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			x: 0.09523081
+			x: 0.009525551
 			y: -0.9315874
 		}
 		timeStep: 0.04249719
@@ -405,15 +405,15 @@ systems: [
 		stereoMin: -5.160199
 		stereoMax: 0.8203317
 		massMin: 0
-		massMax: 0.003
+		massMax: 1
 		velMin: 0
-		velMax: 4.76
+		velMax: 2.5
 		energyMax: 16
 		pitch: 42
 		tone: 0.79399335
-		resonance: 105.39318
-		mix_ambiant_dry: 30.325502
-		mix_ambiant_wet: 90.61028
+		resonance: 185.3284
+		mix_ambiant_dry: 21.937965
+		mix_ambiant_wet: 17.538694
 		mix_ball_dry: 16.403145
 		mix_ball_wet: 91.42576
 		mix_wall_dry: 30.533722
@@ -422,9 +422,9 @@ systems: [
 	{
 		type: rainstick.calibration
 		enabled: true
-		velMax: 4.964889
-		massMax: 0.0037737242
-		xMin: -4.705318
+		velMax: 2.558783
+		massMax: 1
+		xMin: -4.7031083
 		xMax: 0
 		run: true
 	}
@@ -462,8 +462,8 @@ systems: [
 	{
 		type: rainstick.background
 		enabled: true
-		scale: 1.6261675
-		texScale: 0.32134917
+		scale: 0.117294304
+		texScale: 0.063151695
 		shader: {
 			vertex: shaders/bg-vertex.glsl
 			fragment: shaders/bg-marble-fragment.glsl
@@ -476,7 +476,7 @@ systems: [
 			vertex: shaders/impact-vertex.glsl
 			fragment: shaders/impact-fragment.glsl
 		}
-		scale: 30.826416
+		scale: 5.997347
 	}
 	{
 		type: g2d.render
