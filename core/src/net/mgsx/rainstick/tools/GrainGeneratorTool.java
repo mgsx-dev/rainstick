@@ -45,6 +45,7 @@ public class GrainGeneratorTool extends RectangleTool
 	
 	public GrainGeneratorTool(EditorScreen editor) {
 		super("Rainstick - Grains", editor);
+		fix.density = 1;
 	}
 
 	@Override
