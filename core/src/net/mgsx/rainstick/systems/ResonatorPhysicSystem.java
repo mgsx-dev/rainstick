@@ -155,13 +155,12 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	public void update(float deltaTime) {
 		super.update(deltaTime);
 		
+		// no comments
 		GravityAutoSystem gas = getEngine().getSystem(GravityAutoSystem.class);
-		
 		int activeTouch = 0;
 		for (int i = 0; i < 20; i++) {
 			if (Gdx.input.isTouched(i)) activeTouch++;
 		}
-		
 		if(activeTouch == 5 ){
 			if(autogravity == false){
 				autogravity = true;
@@ -171,9 +170,9 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		else{
 			autogravity = false;
 		}
+		// end no comments
 		
-		System.out.println(gas.checkProcessing());
-			
+		// map user input to tone and resonance
 		if ( Gdx.input.isTouched()){
 			this.tone = ((float)Gdx.input.getX() / Gdx.graphics.getWidth());
 			this.resonance = ((float)Gdx.input.getY() / Gdx.graphics.getHeight())*1500 + 150;	
