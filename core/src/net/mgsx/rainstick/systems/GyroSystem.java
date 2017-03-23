@@ -16,8 +16,13 @@ public class GyroSystem extends EntitySystem
 	@Override
 	public void update(float deltaTime) {
 		if(Gdx.input.isPeripheralAvailable(Peripheral.Accelerometer)){
+			/*
 			float gx = Gdx.input.getAccelerometerY();
-			float gy = -Gdx.input.getAccelerometerX();
+			float gy = -Gdx.input.getAccelerometerX();*/
+			float gx = -Gdx.input.getAccelerometerX();
+			float gy = -Gdx.input.getAccelerometerY();
+			
+			
 			getEngine().getSystem(Box2DWorldSystem.class).gravity.set(gx, gy);
 		}
 	}

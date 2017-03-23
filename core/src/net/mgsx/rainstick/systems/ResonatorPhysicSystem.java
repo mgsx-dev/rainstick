@@ -150,13 +150,39 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		super.removedFromEngine(engine);
 	}
 	
-	
+	private boolean autogravity = false;
 	@Override
 	public void update(float deltaTime) {
 		super.update(deltaTime);
 		
-		//this.pitch = ((float)Gdx.input.getX() / Gdx.graphics.getWidth())*48+36;
-		//sendFormants();
+		GravityAutoSystem gas = getEngine().getSystem(GravityAutoSystem.class);
+		
+		int activeTouch = 0;
+		for (int i = 0; i < 20; i++) {
+			if (Gdx.input.isTouched(i)) activeTouch++;
+		}
+		
+		if(activeTouch == 5 ){
+			if(autogravity == false){
+				autogravity = true;
+				gas.setProcessing(!gas.checkProcessing());
+			}
+		}	
+		else{
+			autogravity = false;
+		}
+		
+		System.out.println(gas.checkProcessing());
+			
+		if ( Gdx.input.isTouched()){
+			this.tone = ((float)Gdx.input.getX() / Gdx.graphics.getWidth());
+			this.resonance = ((float)Gdx.input.getY() / Gdx.graphics.getHeight())*1500 + 150;	
+		}
+		sendFormants();
+		sendMix();
+		
+		
+		
 		
 		for(Array<Impact> a : impacts){
 			if(a.size > 0){
@@ -222,7 +248,6 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		ic.material = material;
 		
 		entity.add(ic);
-		
 		getEngine().addEntity(entity);
 	}
 
