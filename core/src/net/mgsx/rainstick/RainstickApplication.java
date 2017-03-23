@@ -41,8 +41,10 @@ public class RainstickApplication extends GameApplication
 	{
 		super.create();
 		
+		
 		// enable libgdx to catch back key
 		Gdx.input.setCatchBackKey(true);
+		
 		Pd.audio.create(new PdConfiguration());
 		
 		// TODO register loader where ?
@@ -98,5 +100,17 @@ public class RainstickApplication extends GameApplication
 	{
 		setTransition(Transitions.fade(Transitions.empty(Color.WHITE), 1f));
 		addTransition(Transitions.fade(selectorScreen, 1));
+	}
+	
+	@Override
+	public void pause() {
+		Pd.audio.pause();
+		super.pause();
+	}
+	
+	@Override
+	public void resume() {
+		super.resume();
+		Pd.audio.resume();
 	}
 }
