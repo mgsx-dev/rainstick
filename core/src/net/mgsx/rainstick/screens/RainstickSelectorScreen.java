@@ -23,14 +23,16 @@ public class RainstickSelectorScreen extends StageScreen
 	private final AssetManager assets;
 	private final Array<Rainstick> rainsticks;
 	private final RainstickApplication screenManager;
+	private final float padding = 10;
 	
 	public RainstickSelectorScreen(RainstickApplication screenManager, AssetManager assets) {
 		super(null);
-		stage.setViewport(new ExtendViewport(1080, 1920));
 		this.assets = assets;
 		this.screenManager = screenManager;
 		
 		rainsticks = new Json().fromJson(Array.class, Rainstick.class, Gdx.files.internal("rainsticks.json"));
+		
+		stage.setViewport(new ExtendViewport(1024 + padding*2, (512+padding*2) * rainsticks.size + padding*2 ));
 		
 		for(Rainstick rainstick : rainsticks){
 			assets.load(rainstick.preview, Texture.class);
@@ -41,11 +43,15 @@ public class RainstickSelectorScreen extends StageScreen
 	public void show() {
 		
 		Table main = new Table(skin);
-		main.defaults().pad(10);
+		main.defaults().pad(padding);
 		
 		for(final Rainstick rainstick : rainsticks)
 		{
-			ImageButton bt = new ImageButton(new TextureRegionDrawable(new TextureRegion(assets.get(rainstick.preview, Texture.class))));
+			TextureRegion tg = new TextureRegion(assets.get(rainstick.preview, Texture.class));
+			tg.setRegionWidth(1024);
+			tg.setRegionHeight(512);
+			ImageButton bt = new ImageButton(new TextureRegionDrawable(tg));
+			
 			main.add(bt).row();
 			bt.addListener(new ChangeListener() {
 				@Override
