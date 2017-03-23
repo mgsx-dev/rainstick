@@ -7,19 +7,23 @@ import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.ai.GdxAI;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
-import com.badlogic.gdx.math.MathUtils;
 
 import net.mgsx.game.core.GamePipeline;
 import net.mgsx.game.core.GameScreen;
+import net.mgsx.game.core.annotations.Editable;
+import net.mgsx.game.core.annotations.EditableSystem;
+import net.mgsx.game.core.annotations.EnumType;
+import net.mgsx.game.core.annotations.Storable;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.pd.Pd;
 import net.mgsx.pd.utils.PdAdapter;
 import net.mgsx.rainstick.components.Ball;
 
+@Storable("rainstick.outline")
+@EditableSystem
 public class BallOutlineRender extends IteratingSystem {
 
 
@@ -27,6 +31,14 @@ public class BallOutlineRender extends IteratingSystem {
 	private GameScreen game;
 	private float feedback;
 	private PdListener feedbackListener;
+	
+	@Editable
+	public float minRadiusRate = 1.1f;
+	@Editable
+	public float maxRadiusRate = 2.0f;
+	@Editable(type=EnumType.UNIT)
+	public float opacity = .5f;
+	
 	
 	public BallOutlineRender(GameScreen game) {
 		super(Family.all(Ball.class,Box2DBodyModel.class).get(), GamePipeline.RENDER );
@@ -81,11 +93,8 @@ public class BallOutlineRender extends IteratingSystem {
 		float y = physics.body.getPosition().y;
 		Ball ball = Ball.components.get(entity);
 		
-		float min = getEngine().getSystem(ResonatorPhysicSystem.class).velMin;
-		float max = getEngine().getSystem(ResonatorPhysicSystem.class).velMax;
-		float speed =MathUtils.clamp(( physics.body.getLinearVelocity().len() - min) / (max - min), 0, 1) ;
-		float speed2 = .5f + .5f * (float)Math.sin(GdxAI.getTimepiece().getTime() * 0.3f * speed);
-		batch.setColor(1f,1f,1f,/*0.05f+ 0.051f*feedback+speed * .05f*/ 10f/255f);
-		batch.circle(x, y, ball .radius*(0.5f + feedback*0.5f)  +(1-speed2)* .025f , 16);
+		batch.setColor(1f,1f,1f, opacity);
+		batch.circle(x, y, ball.radius * (minRadiusRate * (1-feedback) + maxRadiusRate * feedback), 16);
+		System.out.println(feedback);
 	}
 }
