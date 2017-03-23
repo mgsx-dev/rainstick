@@ -15,10 +15,10 @@ import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 public class CalibrationSystem extends IteratingSystem
 {
 	@Editable(readonly=true, realtime=true)
-	public float velMax, massMax, xMin, xMax;
+	public transient float velMax, massMax, xMin, xMax;
 	
 	@Editable
-	public boolean run;
+	public transient boolean run;
 
 	public CalibrationSystem() {
 		super(Family.all(Box2DBodyModel.class).get(), GamePipeline.AFTER_PHYSICS);
