@@ -44,3 +44,22 @@ task afterEclipseImport(description: "Post processing after project generation",
     printer.print(classpath)
   }
 }
+
+
+task spawnPdRemote(group: "pd", description: "Run Puredata with libs path and remote") {  
+	doLast{
+		def workingDir = "$projectDir/../android/assets/pd"   
+		new ProcessBuilder("pd", "-noprefs", "-path", "$projectDir/../../gdx-pd/tools/pd", "-send", "pd-gdx-pd-network-default.pd vis 0", "-send", "pd dsp 1", "-open", "gdx-pd-network-default.pd", "engine.pd")
+        .redirectErrorStream(true)
+        .directory(new File(workingDir))
+        .start()
+	}
+} 
+
+task runRemote(type:JavaExec, group: "pd", description: "Run Puredata with libs path and remote", dependsOn: classes) {  
+	main = "net.mgsx.rainstick.desktop.EditorDesktopRemoteLauncher"
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    workingDir = "$projectDir/../android/assets"
+    ignoreExitValue = true
+} 
