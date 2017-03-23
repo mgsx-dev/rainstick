@@ -690,7 +690,7 @@ entities: [
 systems: [
 	{
 		type: rainstick.gravity
-		enabled: true
+		enabled: false
 		rotationSpeed: 12.158204
 		gravityScale: 3.5361605
 	}
@@ -699,8 +699,7 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			x: 2.3879719
-			y: -2.6080685
+			y: 9
 		}
 		timeStep: 0.04249719
 		velocityIterations: 11
@@ -734,7 +733,7 @@ systems: [
 	{
 		type: rainstick.impact.update
 		enabled: true
-		lifeMax: 0.70857775
+		lifeMax: 2.0375397
 	}
 	{
 		type: core.clearScreen
@@ -765,8 +764,12 @@ systems: [
 	{
 		type: rainstick.background
 		enabled: true
-		scale: 0.014570187
-		texScale: 6.757443E-4
+		scale: 0.10938883
+		texScale: 0.0068577575
+		color: {
+			r: 46.206123
+			a: 1
+		}
 		shader: {
 			vertex: shaders/bg-vertex.glsl
 			fragment: shaders/bg-gray-fragment.glsl
@@ -775,9 +778,9 @@ systems: [
 	{
 		type: rainstick.outline
 		enabled: true
-		minRadiusRate: 1.1
-		maxRadiusRate: 2
-		opacity: 0.5
+		minRadiusRate: 1.5558524
+		maxRadiusRate: 2.4799993
+		opacity: 0.34409794
 	}
 	{
 		type: rainstick.impact.render
@@ -786,7 +789,7 @@ systems: [
 			vertex: shaders/impact-vertex.glsl
 			fragment: shaders/impact-fragment.glsl
 		}
-		scale: 13.253994
+		scale: 40.885662
 	}
 	{
 		type: g2d.render
@@ -803,6 +806,8 @@ views: [
 	rainstick.background
 	rainstick.calibration
 	rainstick.gravity
+	core.clearScreen
+	rainstick.outline
 	net.mgsx.game.plugins.core.systems.GridDebugSystem
 ]
 }

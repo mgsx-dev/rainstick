@@ -3,6 +3,7 @@ package net.mgsx.rainstick.systems;
 import com.badlogic.ashley.core.EntitySystem;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ai.GdxAI;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
@@ -28,6 +29,9 @@ public class BackgroundSystem extends EntitySystem
 	private Sprite sprite;
 	private Batch batch;
 	private GameScreen game;
+	
+	@Editable
+	public Color color = new Color(Color.WHITE);
 	
 	@Editable
 	public FilesShaderProgram shader = new FilesShaderProgram(
@@ -56,7 +60,7 @@ public class BackgroundSystem extends EntitySystem
 		
 		sprite.setBounds(-1, -1, 2, 2);
 		sprite.setRegion(0, 0, texScale, texScale);
-		
+		shader.program().setUniformf("u_color", color);
 		shader.program().setUniformf("u_scale", scale);
 		shader.program().setUniformf("u_time", GdxAI.getTimepiece().getTime());
 //		shader.setUniformf("u_world", offset.x, offset.y);

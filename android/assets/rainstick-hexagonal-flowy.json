@@ -1128,54 +1128,58 @@ entities: [
 	{
 		id: 23
 		box2d: {
-			id: null
+			id: Chain Loop
 			def: {
-				type: DynamicBody
 				position: {
-					x: -7.0764117
-					y: 0.5985806
+					x: -9.991961
+					y: 0.5781512
 				}
-				allowSleep: false
 			}
 			fixtures: [
 				{
 					def: {
 						shape: {
-							type: Polygon
+							type: Chain
+							loop: true
 							vertex: [
+								{}
 								{
-									x: 0.109386615
+									x: 1
+									y: 1
 								}
 								{
-									x: 0.054699365
-									y: 0.09472809
+									x: 2
+									y: 1
 								}
 								{
-									x: -0.054699384
-									y: 0.09472809
+									x: 3
 								}
 								{
-									x: -0.109386615
-									y: -9.562882E-9
+									x: 3
+									y: -1
 								}
 								{
-									x: -0.05469933
-									y: -0.0947281
+									x: 2
+									y: -2
 								}
 								{
-									x: 0.054699365
-									y: -0.094728075
+									x: 1
+									y: -2
+								}
+								{
+									y: -1
 								}
 							]
 						}
-						restitution: 0.06379336
-						density: 0.14021555
+						density: 1
 						filter: {}
 					}
 				}
 			]
 		}
-		rainstick.ball: {}
+		rainstick.resonator: {
+			material: 52
+		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -4151,57 +4155,33 @@ entities: [
 	}
 	{
 		id: 79
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
+		camera: {
+			camera: {
+				fieldOfView: 67
 				position: {
-					x: -7.1014833
-					y: 0.06894618
+					x: -0.97875684
+					z: 9.738518
 				}
-				allowSleep: false
+				direction: {
+					z: -1
+				}
+				up: {
+					y: 1
+				}
+				near: 1
+				far: 3000
+				viewportWidth: 1155.5864
+				viewportHeight: 1000
 			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.2542255
-								}
-								{
-									x: 0.12712683
-									y: 0.22015761
-								}
-								{
-									x: -0.12712687
-									y: 0.22015761
-								}
-								{
-									x: -0.2542255
-									y: -2.2225098E-8
-								}
-								{
-									x: -0.12712675
-									y: -0.22015762
-								}
-								{
-									x: 0.12712683
-									y: -0.22015756
-								}
-							]
-						}
-						restitution: 0.06379336
-						density: 0.14021555
-						filter: {}
-					}
-				}
-			]
 		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
+		active: {}
+		viewport: {
+			viewport: {
+				type: fit
+				worldWidth: 1155.5864
+				worldHeight: 1000
+			}
+		}
 	}
 	{
 		id: 80
@@ -5719,99 +5699,11 @@ entities: [
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
-	{
-		id: 108
-		box2d: {
-			id: Chain Loop
-			def: {
-				position: {
-					x: -9.991961
-					y: 0.5781512
-				}
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Chain
-							loop: true
-							vertex: [
-								{}
-								{
-									x: 1
-									y: 1
-								}
-								{
-									x: 2
-									y: 1
-								}
-								{
-									x: 3
-								}
-								{
-									x: 3
-									y: -1
-								}
-								{
-									x: 2
-									y: -2
-								}
-								{
-									x: 1
-									y: -2
-								}
-								{
-									y: -1
-								}
-							]
-						}
-						density: 1
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.resonator: {
-			material: 52
-		}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 109
-		camera: {
-			camera: {
-				fieldOfView: 67
-				position: {
-					x: -0.97875684
-					z: 13.183915
-				}
-				direction: {
-					z: -1
-				}
-				up: {
-					y: 1
-				}
-				near: 1
-				far: 3000
-				viewportWidth: 1101.592
-				viewportHeight: 1000
-			}
-		}
-		active: {}
-		viewport: {
-			viewport: {
-				type: fit
-				worldWidth: 1101.592
-				worldHeight: 1000
-			}
-		}
-	}
 ]
 systems: [
 	{
 		type: rainstick.gravity
-		enabled: true
+		enabled: false
 		rotationSpeed: 12.158204
 		gravityScale: 3.5361605
 	}
@@ -5820,10 +5712,9 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			x: 2.611827
-			y: 2.3838606
+			y: -9
 		}
-		timeStep: 0.04249719
+		timeStep: 0.016170762
 		velocityIterations: 11
 		positionIterations: 6
 	}
@@ -5834,19 +5725,19 @@ systems: [
 		stereoMin: -9.723556
 		stereoMax: 6.6879783
 		massMin: 0
-		massMax: 0.02592043
+		massMax: 0.022518264
 		velMin: 0
-		velMax: 8.039802
-		energyMax: 16
-		pitch: 48
-		tone: 0.4280476
-		resonance: 80.67344
-		mix_ambiant_dry: 22.761864
-		mix_ambiant_wet: 105.26133
-		mix_ball_dry: 20
-		mix_ball_wet: 18.242037
-		mix_wall_dry: 40.70871
-		mix_wall_wet: 45.302624
+		velMax: 13.490967
+		energyMax: 14.442753
+		pitch: 42.714912
+		tone: 1.2860221
+		resonance: 967.04913
+		mix_ambiant_dry: 114.54349
+		mix_ambiant_wet: 11.37219
+		mix_ball_dry: 100
+		mix_ball_wet: 6.621377
+		mix_wall_dry: 100
+		mix_wall_wet: 6.727156
 	}
 	{
 		type: rainstick.calibration
@@ -5887,7 +5778,13 @@ systems: [
 		type: rainstick.background
 		enabled: true
 		scale: 0.014570187
-		texScale: 6.757443E-4
+		texScale: 0.37052697
+		color: {
+			r: 1
+			g: 1
+			b: 1
+			a: 1
+		}
 		shader: {
 			vertex: shaders/bg-vertex.glsl
 			fragment: shaders/bg-gray-fragment.glsl
@@ -5896,9 +5793,9 @@ systems: [
 	{
 		type: rainstick.outline
 		enabled: true
-		minRadiusRate: 1.1
-		maxRadiusRate: 2
-		opacity: 0.5
+		minRadiusRate: 0.16311891
+		maxRadiusRate: 1.0283849
+		opacity: 0.16758485
 	}
 	{
 		type: rainstick.impact.render
@@ -5924,6 +5821,8 @@ views: [
 	rainstick.background
 	rainstick.calibration
 	rainstick.gravity
+	core.clearScreen
+	rainstick.outline
 	net.mgsx.game.plugins.core.systems.GridDebugSystem
 ]
 }

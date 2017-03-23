@@ -569,8 +569,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 2.4276974
-					y: 0.4112227
+					x: 4.3422236
+					y: -2.1206481
 				}
 				allowSleep: false
 			}
@@ -769,8 +769,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 0.9996865
-					y: 0.9998663
+					x: 2.2453988
+					y: -3
 				}
 				allowSleep: false
 			}
@@ -781,15 +781,18 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: -0.049523205
-									y: 0.08576401
+									x: -1.1774754E-8
+									y: 0.13468748
 								}
 								{
-									x: -0.049523156
-									y: -0.08576401
+									x: -0.13468748
+									y: -1.1774754E-8
+								}
+								{
+									y: -0.13468748
 								}
 							]
 						}
@@ -969,8 +972,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 3.3333335
-					y: -2.900298
+					x: 2.4907975
+					y: -2.6666667
 				}
 				allowSleep: false
 			}
@@ -981,15 +984,15 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: -0.049523205
-									y: 0.08576401
+									x: -0.06735122
+									y: 0.116638474
 								}
 								{
-									x: -0.049523156
-									y: -0.08576401
+									x: -0.06735116
+									y: -0.11663848
 								}
 							]
 						}
@@ -1011,8 +1014,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 3.6666665
-					y: -2.900298
+					x: 3.905227
+					y: -1.7133702
 				}
 				allowSleep: false
 			}
@@ -1061,8 +1064,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 2.0137393
-					y: 1.0002154
+					x: 2.2453988
+					y: -2.6666667
 				}
 				allowSleep: false
 			}
@@ -1073,18 +1076,27 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: -8.65795E-9
-									y: 0.099035405
+									x: 0.0673512
+									y: 0.116638474
 								}
 								{
-									x: -0.099035405
-									y: -8.65795E-9
+									x: -0.06735122
+									y: 0.116638474
 								}
 								{
-									y: -0.099035405
+									x: -0.13468748
+									y: -1.1774754E-8
+								}
+								{
+									x: -0.06735116
+									y: -0.11663848
+								}
+								{
+									x: 0.0673512
+									y: -0.11663845
 								}
 							]
 						}
@@ -1148,8 +1160,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 1.9795588
-					y: 1.0272893
+					x: 2.2453988
+					y: -3.6666665
 				}
 				allowSleep: false
 			}
@@ -1160,15 +1172,23 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: -0.049523205
-									y: 0.08576401
+									x: 0.041635446
+									y: 0.12809062
 								}
 								{
-									x: -0.049523156
-									y: -0.08576401
+									x: -0.10896142
+									y: 0.079171486
+								}
+								{
+									x: -0.10896142
+									y: -0.079171516
+								}
+								{
+									x: 0.041635457
+									y: -0.12809062
 								}
 							]
 						}
@@ -1235,8 +1255,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 3.3333335
-					y: -3.3504472
+					x: 2
+					y: -2
 				}
 				allowSleep: false
 			}
@@ -1247,18 +1267,27 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: -8.65795E-9
-									y: 0.099035405
+									x: 0.0673512
+									y: 0.116638474
 								}
 								{
-									x: -0.099035405
-									y: -8.65795E-9
+									x: -0.06735122
+									y: 0.116638474
 								}
 								{
-									y: -0.099035405
+									x: -0.13468748
+									y: -1.1774754E-8
+								}
+								{
+									x: -0.06735116
+									y: -0.11663848
+								}
+								{
+									x: 0.0673512
+									y: -0.11663845
 								}
 							]
 						}
@@ -1280,8 +1309,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 3.6666665
-					y: -3.3504472
+					x: 2.9976838
+					y: -1.9947634
 				}
 				allowSleep: false
 			}
@@ -1292,18 +1321,15 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: -8.65795E-9
-									y: 0.099035405
+									x: -0.06735122
+									y: 0.116638474
 								}
 								{
-									x: -0.099035405
-									y: -8.65795E-9
-								}
-								{
-									y: -0.099035405
+									x: -0.06735116
+									y: -0.11663848
 								}
 							]
 						}
@@ -1524,8 +1550,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 3.3333335
-					y: -3.8005962
+					x: 2.7361963
+					y: -3.3333335
 				}
 				allowSleep: false
 			}
@@ -1536,15 +1562,27 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: -0.049523205
-									y: 0.08576401
+									x: 0.0673512
+									y: 0.116638474
 								}
 								{
-									x: -0.049523156
-									y: -0.08576401
+									x: -0.06735122
+									y: 0.116638474
+								}
+								{
+									x: -0.13468748
+									y: -1.1774754E-8
+								}
+								{
+									x: -0.06735116
+									y: -0.11663848
+								}
+								{
+									x: 0.0673512
+									y: -0.11663845
 								}
 							]
 						}
@@ -1624,8 +1662,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 2.0078259
-					y: 1.0067841
+					x: 2.9815953
+					y: -2.3333333
 				}
 				allowSleep: false
 			}
@@ -1636,15 +1674,23 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: -0.049523205
-									y: 0.08576401
+									x: 0.041635446
+									y: 0.12809062
 								}
 								{
-									x: -0.049523156
-									y: -0.08576401
+									x: -0.10896142
+									y: 0.079171486
+								}
+								{
+									x: -0.10896142
+									y: -0.079171516
+								}
+								{
+									x: 0.041635457
+									y: -0.12809062
 								}
 							]
 						}
@@ -1982,58 +2028,52 @@ entities: [
 	{
 		id: 40
 		box2d: {
-			id: null
+			id: Chain Loop
 			def: {
-				type: DynamicBody
 				position: {
-					x: 3.226994
-					y: -3
+					x: 1.4479502
+					y: 0.05013354
 				}
-				allowSleep: false
 			}
 			fixtures: [
 				{
 					def: {
 						shape: {
-							type: Polygon
+							type: Chain
+							loop: true
 							vertex: [
+								{}
 								{
-									x: 0.13468748
+									x: 0.41891038
+									y: 0.80561006
 								}
 								{
-									x: 0.08397915
-									y: 0.10530062
+									x: 1.1407328
+									y: 2.107482
 								}
 								{
-									x: -0.029988777
-									y: 0.13130648
+									x: 1.3037491
+									y: 1.0905774
 								}
 								{
-									x: -0.121344425
-									y: 0.058448672
+									x: 1
+									y: 0.5891785
 								}
 								{
-									x: -0.121344425
-									y: -0.058448695
-								}
-								{
-									x: -0.029988743
-									y: -0.13130648
-								}
-								{
-									x: 0.08397915
-									y: -0.105300605
+									x: 0.7540364
+									y: 0.34158516
 								}
 							]
 						}
-						restitution: 0.11377579
-						density: 0.1172463
+						density: 1
 						filter: {}
 					}
 				}
 			]
 		}
-		rainstick.ball: {}
+		rainstick.resonator: {
+			material: 67
+		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
@@ -2206,8 +2246,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 2.2383587
-					y: 1.0054625
+					x: 2.4907975
+					y: -3.6666665
 				}
 				allowSleep: false
 			}
@@ -2218,23 +2258,15 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: 0.03061445
-									y: 0.09418475
+									x: -0.06735122
+									y: 0.116638474
 								}
 								{
-									x: -0.08011909
-									y: 0.05821462
-								}
-								{
-									x: -0.08011909
-									y: -0.05821464
-								}
-								{
-									x: 0.030614458
-									y: -0.09418475
+									x: -0.06735116
+									y: -0.11663848
 								}
 							]
 						}
@@ -2563,8 +2595,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 3.226994
-					y: -3.6666665
+					x: 2.9815953
+					y: -3.3333335
 				}
 				allowSleep: false
 			}
@@ -2578,15 +2610,28 @@ entities: [
 									x: 0.13468748
 								}
 								{
-									x: -1.1774754E-8
-									y: 0.13468748
+									x: 0.08397915
+									y: 0.10530062
 								}
 								{
-									x: -0.13468748
-									y: -1.1774754E-8
+									x: -0.029988777
+									y: 0.13130648
 								}
 								{
-									y: -0.13468748
+									x: -0.121344425
+									y: 0.058448672
+								}
+								{
+									x: -0.121344425
+									y: -0.058448695
+								}
+								{
+									x: -0.029988743
+									y: -0.13130648
+								}
+								{
+									x: 0.08397915
+									y: -0.105300605
 								}
 							]
 						}
@@ -2982,8 +3027,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 3.226994
-					y: -2.6666667
+					x: 2.4907975
+					y: -2
 				}
 				allowSleep: false
 			}
@@ -2997,28 +3042,12 @@ entities: [
 									x: 0.13468748
 								}
 								{
-									x: 0.08397915
-									y: 0.10530062
+									x: -0.06735122
+									y: 0.116638474
 								}
 								{
-									x: -0.029988777
-									y: 0.13130648
-								}
-								{
-									x: -0.121344425
-									y: 0.058448672
-								}
-								{
-									x: -0.121344425
-									y: -0.058448695
-								}
-								{
-									x: -0.029988743
-									y: -0.13130648
-								}
-								{
-									x: 0.08397915
-									y: -0.105300605
+									x: -0.06735116
+									y: -0.11663848
 								}
 							]
 						}
@@ -3952,8 +3981,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: 2.2494848
-					y: 1.0007942
+					x: 2.4907975
+					y: -3
 				}
 				allowSleep: false
 			}
@@ -3964,15 +3993,31 @@ entities: [
 							type: Polygon
 							vertex: [
 								{
-									x: 0.099035405
+									x: 0.13468748
 								}
 								{
-									x: -0.049523205
-									y: 0.08576401
+									x: 0.08397915
+									y: 0.10530062
 								}
 								{
-									x: -0.049523156
-									y: -0.08576401
+									x: -0.029988777
+									y: 0.13130648
+								}
+								{
+									x: -0.121344425
+									y: 0.058448672
+								}
+								{
+									x: -0.121344425
+									y: -0.058448695
+								}
+								{
+									x: -0.029988743
+									y: -0.13130648
+								}
+								{
+									x: 0.08397915
+									y: -0.105300605
 								}
 							]
 						}
@@ -4841,53 +4886,34 @@ entities: [
 	}
 	{
 		id: 96
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
+		camera: {
+			camera: {
+				fieldOfView: 67
 				position: {
-					x: 3.226994
-					y: -3.3333335
+					x: 2.0901582
+					y: 0.098686345
+					z: 11.103073
 				}
-				allowSleep: false
+				direction: {
+					z: -1
+				}
+				up: {
+					y: 1
+				}
+				near: 1
+				far: 3000
+				viewportWidth: 741.81665
+				viewportHeight: 1000
 			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: 0.041635446
-									y: 0.12809062
-								}
-								{
-									x: -0.10896142
-									y: 0.079171486
-								}
-								{
-									x: -0.10896142
-									y: -0.079171516
-								}
-								{
-									x: 0.041635457
-									y: -0.12809062
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
 		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
+		active: {}
+		viewport: {
+			viewport: {
+				type: fit
+				worldWidth: 741.81665
+				worldHeight: 1000
+			}
+		}
 	}
 	{
 		id: 97
@@ -4931,727 +4957,11 @@ entities: [
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
-	{
-		id: 98
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.2680848
-					y: 1.0156882
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: -0.06735122
-									y: 0.116638474
-								}
-								{
-									x: -0.06735116
-									y: -0.11663848
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 99
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.2453988
-					y: -2.6666667
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: 0.0673512
-									y: 0.116638474
-								}
-								{
-									x: -0.06735122
-									y: 0.116638474
-								}
-								{
-									x: -0.13468748
-									y: -1.1774754E-8
-								}
-								{
-									x: -0.06735116
-									y: -0.11663848
-								}
-								{
-									x: 0.0673512
-									y: -0.11663845
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 100
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.9815953
-					y: -2.3333333
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: 0.041635446
-									y: 0.12809062
-								}
-								{
-									x: -0.10896142
-									y: 0.079171486
-								}
-								{
-									x: -0.10896142
-									y: -0.079171516
-								}
-								{
-									x: 0.041635457
-									y: -0.12809062
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 101
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.4907975
-					y: -3
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: 0.08397915
-									y: 0.10530062
-								}
-								{
-									x: -0.029988777
-									y: 0.13130648
-								}
-								{
-									x: -0.121344425
-									y: 0.058448672
-								}
-								{
-									x: -0.121344425
-									y: -0.058448695
-								}
-								{
-									x: -0.029988743
-									y: -0.13130648
-								}
-								{
-									x: 0.08397915
-									y: -0.105300605
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 102
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.2453988
-					y: -3
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: -1.1774754E-8
-									y: 0.13468748
-								}
-								{
-									x: -0.13468748
-									y: -1.1774754E-8
-								}
-								{
-									y: -0.13468748
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 103
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.4907975
-					y: -3.6666665
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: -0.06735122
-									y: 0.116638474
-								}
-								{
-									x: -0.06735116
-									y: -0.11663848
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 104
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.2453988
-					y: -3.6666665
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: 0.041635446
-									y: 0.12809062
-								}
-								{
-									x: -0.10896142
-									y: 0.079171486
-								}
-								{
-									x: -0.10896142
-									y: -0.079171516
-								}
-								{
-									x: 0.041635457
-									y: -0.12809062
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 105
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.7361963
-					y: -3.3333335
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: 0.0673512
-									y: 0.116638474
-								}
-								{
-									x: -0.06735122
-									y: 0.116638474
-								}
-								{
-									x: -0.13468748
-									y: -1.1774754E-8
-								}
-								{
-									x: -0.06735116
-									y: -0.11663848
-								}
-								{
-									x: 0.0673512
-									y: -0.11663845
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 106
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.9815953
-					y: -3.3333335
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: 0.08397915
-									y: 0.10530062
-								}
-								{
-									x: -0.029988777
-									y: 0.13130648
-								}
-								{
-									x: -0.121344425
-									y: 0.058448672
-								}
-								{
-									x: -0.121344425
-									y: -0.058448695
-								}
-								{
-									x: -0.029988743
-									y: -0.13130648
-								}
-								{
-									x: 0.08397915
-									y: -0.105300605
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 107
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.4907975
-					y: -2.6666667
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: -0.06735122
-									y: 0.116638474
-								}
-								{
-									x: -0.06735116
-									y: -0.11663848
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 108
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2
-					y: -2
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: 0.0673512
-									y: 0.116638474
-								}
-								{
-									x: -0.06735122
-									y: 0.116638474
-								}
-								{
-									x: -0.13468748
-									y: -1.1774754E-8
-								}
-								{
-									x: -0.06735116
-									y: -0.11663848
-								}
-								{
-									x: 0.0673512
-									y: -0.11663845
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 109
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.9976838
-					y: -1.9947634
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: -0.06735122
-									y: 0.116638474
-								}
-								{
-									x: -0.06735116
-									y: -0.11663848
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 110
-		box2d: {
-			id: null
-			def: {
-				type: DynamicBody
-				position: {
-					x: 2.4907975
-					y: -2
-				}
-				allowSleep: false
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Polygon
-							vertex: [
-								{
-									x: 0.13468748
-								}
-								{
-									x: -0.06735122
-									y: 0.116638474
-								}
-								{
-									x: -0.06735116
-									y: -0.11663848
-								}
-							]
-						}
-						restitution: 0.11377579
-						density: 0.1172463
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.ball: {}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 111
-		box2d: {
-			id: Chain Loop
-			def: {
-				position: {
-					x: 1.3225228
-					y: 0.11283389
-				}
-			}
-			fixtures: [
-				{
-					def: {
-						shape: {
-							type: Chain
-							loop: true
-							vertex: [
-								{}
-								{
-									x: 0.41891038
-									y: 0.80561006
-								}
-								{
-									x: 1.1407328
-									y: 2.107482
-								}
-								{
-									x: 1.3037491
-									y: 1.0905774
-								}
-								{
-									x: 1
-									y: 0.5891785
-								}
-								{
-									x: 0.7540364
-									y: 0.34158516
-								}
-							]
-						}
-						density: 1
-						filter: {}
-					}
-				}
-			]
-		}
-		rainstick.resonator: {
-			material: 67
-		}
-		rainstick.mask: {}
-		rainstick.mask-invert: {}
-	}
-	{
-		id: 112
-		camera: {
-			camera: {
-				fieldOfView: 67
-				position: {
-					x: 2.0901582
-					y: 0.098686345
-					z: 11.103073
-				}
-				direction: {
-					z: -1
-				}
-				up: {
-					y: 1
-				}
-				near: 1
-				far: 3000
-				viewportWidth: 741.81665
-				viewportHeight: 1000
-			}
-		}
-		active: {}
-		viewport: {
-			viewport: {
-				type: fit
-				worldWidth: 741.81665
-				worldHeight: 1000
-			}
-		}
-	}
 ]
 systems: [
 	{
 		type: rainstick.gravity
-		enabled: true
+		enabled: false
 		rotationSpeed: 28.324675
 		gravityScale: 0.21138223
 	}
@@ -5660,10 +4970,9 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			x: 0.07370901
-			y: 0.19811468
+			y: 9
 		}
-		timeStep: 0.04249719
+		timeStep: 0.008433531
 		velocityIterations: 11
 		positionIterations: 6
 	}
@@ -5676,11 +4985,11 @@ systems: [
 		massMin: 0
 		massMax: 0.005448454
 		velMin: 0
-		velMax: 3.7937849
+		velMax: 13.258554
 		energyMax: 16
 		pitch: 48
 		tone: 0
-		resonance: 250
+		resonance: 295.86407
 		mix_ambiant_dry: 20
 		mix_ambiant_wet: 32
 		mix_ball_dry: 27
@@ -5695,7 +5004,7 @@ systems: [
 	{
 		type: rainstick.impact.update
 		enabled: true
-		lifeMax: 0.18930098
+		lifeMax: 1.7234985
 	}
 	{
 		type: core.clearScreen
@@ -5726,19 +5035,24 @@ systems: [
 	{
 		type: rainstick.background
 		enabled: true
-		scale: 0.12845951
-		texScale: 0.5074162
+		scale: 0.117708564
+		texScale: 0.011627595
+		color: {
+			g: 0.6013219
+			b: 0.69876224
+			a: 1
+		}
 		shader: {
 			vertex: shaders/bg-vertex.glsl
-			fragment: shaders/bg-gray-fragment.glsl
+			fragment: shaders/bg-marble-fragment.glsl
 		}
 	}
 	{
 		type: rainstick.outline
 		enabled: true
-		minRadiusRate: 1.1
-		maxRadiusRate: 2
-		opacity: 0.5
+		minRadiusRate: 0.33924726
+		maxRadiusRate: 1.0495378
+		opacity: 0.07193904
 	}
 	{
 		type: rainstick.impact.render
@@ -5747,7 +5061,7 @@ systems: [
 			vertex: shaders/impact-vertex.glsl
 			fragment: shaders/impact-fragment.glsl
 		}
-		scale: 142.32703
+		scale: 5.4693713
 	}
 	{
 		type: g2d.render
@@ -5764,5 +5078,8 @@ views: [
 	rainstick.background
 	rainstick.calibration
 	rainstick.gravity
+	core.clearScreen
+	rainstick.outline
+	net.mgsx.game.plugins.core.systems.GridDebugSystem
 ]
 }
