@@ -95,6 +95,5 @@ public class BallOutlineRender extends IteratingSystem {
 		
 		batch.setColor(1f,1f,1f, opacity);
 		batch.circle(x, y, ball.radius * (minRadiusRate * (1-feedback) + maxRadiusRate * feedback), 16);
-		System.out.println(feedback);
 	}
 }
