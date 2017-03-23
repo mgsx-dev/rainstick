@@ -5616,6 +5616,37 @@ entities: [
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
 	}
+	{
+		id: 112
+		camera: {
+			camera: {
+				fieldOfView: 67
+				position: {
+					x: 2.0901582
+					y: 0.098686345
+					z: 11.103073
+				}
+				direction: {
+					z: -1
+				}
+				up: {
+					y: 1
+				}
+				near: 1
+				far: 3000
+				viewportWidth: 741.81665
+				viewportHeight: 1000
+			}
+		}
+		active: {}
+		viewport: {
+			viewport: {
+				type: fit
+				worldWidth: 741.81665
+				worldHeight: 1000
+			}
+		}
+	}
 ]
 systems: [
 	{
@@ -5629,8 +5660,8 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			x: -0.16010737
-			y: -0.13801475
+			x: 0.07370901
+			y: 0.19811468
 		}
 		timeStep: 0.04249719
 		velocityIterations: 11
@@ -5660,11 +5691,6 @@ systems: [
 	{
 		type: rainstick.calibration
 		enabled: true
-		velMax: 8.322132
-		massMax: 0.005820159
-		xMin: -2.6087928
-		xMax: 6.88426
-		run: true
 	}
 	{
 		type: rainstick.impact.update
@@ -5706,6 +5732,13 @@ systems: [
 			vertex: shaders/bg-vertex.glsl
 			fragment: shaders/bg-gray-fragment.glsl
 		}
+	}
+	{
+		type: rainstick.outline
+		enabled: true
+		minRadiusRate: 1.1
+		maxRadiusRate: 2
+		opacity: 0.5
 	}
 	{
 		type: rainstick.impact.render

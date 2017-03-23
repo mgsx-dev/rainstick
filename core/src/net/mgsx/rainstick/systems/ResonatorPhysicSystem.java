@@ -64,11 +64,13 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	@Editable
 	public float mix_ambiant_dry = 20, mix_ambiant_wet= 32,mix_ball_dry= 27 , mix_ball_wet = 70, mix_wall_dry = 25, mix_wall_wet = 80;
 	
+	private float dynTone, dynResonance;
+	private boolean touchControl;
 	
 	
 	@Editable
 	public void sendFormants (){
-		Pd.audio.sendList("kit-params", pitch, tone, resonance);
+		Pd.audio.sendList("kit-params", pitch, dynTone, dynResonance);
 	}
 	@Editable
 	public void sendMix(){
@@ -174,9 +176,14 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		
 		// map user input to tone and resonance
 		if ( Gdx.input.isTouched()){
-			this.tone = ((float)Gdx.input.getX() / Gdx.graphics.getWidth());
-			this.resonance = ((float)Gdx.input.getY() / Gdx.graphics.getHeight())*1500 + 150;	
+			touchControl = true;
+			this.dynTone = ((float)Gdx.input.getX() / Gdx.graphics.getWidth());
+			this.dynResonance = ((float)Gdx.input.getY() / Gdx.graphics.getHeight())*1500 + 150;	
+		}else if(!touchControl){
+			this.dynTone = this.tone;
+			this.dynResonance = this.resonance;
 		}
+		
 		sendFormants();
 		sendMix();
 		
