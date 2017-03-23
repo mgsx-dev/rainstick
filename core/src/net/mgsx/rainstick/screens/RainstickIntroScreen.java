@@ -42,6 +42,9 @@ public class RainstickIntroScreen extends StageScreen
 
 	@Override
 	public void show() {
+		
+		getStage().getRoot().clearChildren();
+		
 		BitmapFont font = assets.get("font-x60.ttf", BitmapFont.class);
 		Texture texture = assets.get("blank.png", Texture.class);
 		
