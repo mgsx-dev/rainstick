@@ -14,6 +14,7 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Json;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
+import net.mgsx.game.core.Kit;
 import net.mgsx.game.core.screen.StageScreen;
 import net.mgsx.rainstick.RainstickApplication;
 import net.mgsx.rainstick.model.Rainstick;
@@ -24,6 +25,7 @@ public class RainstickSelectorScreen extends StageScreen
 	private final Array<Rainstick> rainsticks;
 	private final RainstickApplication screenManager;
 	private final float padding = 10;
+	private Table main;
 	
 	public RainstickSelectorScreen(RainstickApplication screenManager, AssetManager assets) {
 		super(null);
@@ -42,29 +44,32 @@ public class RainstickSelectorScreen extends StageScreen
 	@Override
 	public void show() {
 		
-		Table main = new Table(skin);
-		main.defaults().pad(padding);
-		
-		for(final Rainstick rainstick : rainsticks)
+		if(main == null)
 		{
-			TextureRegion tg = new TextureRegion(assets.get(rainstick.preview, Texture.class));
-			tg.setRegionWidth(1024);
-			tg.setRegionHeight(512);
-			ImageButton bt = new ImageButton(new TextureRegionDrawable(tg));
+			main = new Table(skin);
+			main.defaults().pad(padding);
 			
-			main.add(bt).row();
-			bt.addListener(new ChangeListener() {
-				@Override
-				public void changed(ChangeEvent event, Actor actor) {
-					screenManager.showRainstick(rainstick);
-				}
-			});
+			for(final Rainstick rainstick : rainsticks)
+			{
+				TextureRegion tg = new TextureRegion(assets.get(rainstick.preview, Texture.class));
+				tg.setRegionWidth(1024);
+				tg.setRegionHeight(512);
+				ImageButton bt = new ImageButton(new TextureRegionDrawable(tg));
+				
+				main.add(bt).row();
+				bt.addListener(new ChangeListener() {
+					@Override
+					public void changed(ChangeEvent event, Actor actor) {
+						Kit.inputs.removeProcessor(stage);
+						screenManager.showRainstick(rainstick);
+					}
+				});
+			}
+			
+			getStage().addActor(main);
+			
+			main.setFillParent(true);
 		}
-		
-		getStage().addActor(main);
-		
-		main.setFillParent(true);
-		
 		super.show();
 	}
 	

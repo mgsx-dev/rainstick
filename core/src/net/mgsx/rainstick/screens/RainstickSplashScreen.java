@@ -19,6 +19,7 @@ import net.mgsx.rainstick.RainstickApplication;
 public class RainstickSplashScreen extends StageScreen
 {
 	final private AssetManager assets;
+	private Table main;
 	
 	public RainstickSplashScreen(AssetManager assets) {
 		super(null);
@@ -39,36 +40,36 @@ public class RainstickSplashScreen extends StageScreen
 	}
 
 	@Override
-	public void show() {
-		BitmapFont font1 = assets.get("font-x120.ttf", BitmapFont.class);
-		BitmapFont font2 = assets.get("font-x60.ttf", BitmapFont.class);
-		
-		Table main = new Table(skin);
-		main.defaults();
-		
-		LabelStyle style = new LabelStyle();
-		style.font = font1;
-		style.fontColor = Color.BLACK;
-		Label label = new Label("Rainstick", style);
-		
-		main.add(label).expand().row();
-		
-		style = new LabelStyle();
-		style.font = font2;
-		style.fontColor = Color.GRAY;
-		label = new Label("powered by", style);
-		main.add(label).padBottom(10).row();
-		
-		Image img1 = new Image(assets.get("libgdx_logo.png", Texture.class));
-		main.add(img1).padBottom(40).row();
-//		Image img2 = new Image(skin.getDrawable("gdxpd.png"));
-//		main.add(img2).row();
-		
-		
-		getStage().addActor(main);
-		
-		main.setFillParent(true);
-		
+	public void show()
+	{
+		if(main == null)
+		{
+			BitmapFont font1 = assets.get("font-x120.ttf", BitmapFont.class);
+			BitmapFont font2 = assets.get("font-x60.ttf", BitmapFont.class);
+			
+			main = new Table(skin);
+			main.defaults();
+			
+			LabelStyle style = new LabelStyle();
+			style.font = font1;
+			style.fontColor = Color.BLACK;
+			Label label = new Label("Rainstick", style);
+			
+			main.add(label).expand().row();
+			
+			style = new LabelStyle();
+			style.font = font2;
+			style.fontColor = Color.GRAY;
+			label = new Label("powered by", style);
+			main.add(label).padBottom(10).row();
+			
+			Image img1 = new Image(assets.get("libgdx_logo.png", Texture.class));
+			main.add(img1).padBottom(40).row();
+			
+			getStage().addActor(main);
+			
+			main.setFillParent(true);
+		}
 		super.show();
 	}
 	

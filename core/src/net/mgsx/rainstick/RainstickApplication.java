@@ -82,17 +82,20 @@ public class RainstickApplication extends GameApplication
 		final FPSLogger logger = new FPSLogger();
 		
 		GameScreen rainstickScreen = new GameScreen(this, assets, registry){
+			private boolean exiting = false;
 			@Override
 			public void render(float delta) {
 				super.render(delta);
-				if(Gdx.input.isKeyPressed(Input.Keys.BACK)) showMenu();
+				if(Gdx.input.isKeyPressed(Input.Keys.BACK) && !exiting){
+					exiting = true;
+					showMenu();
+				}
 				if(debugFPS){
 					logger.log();
 				}
 			}
 			@Override
 			public void hide() {
-				// TODO free all (dispose)
 				super.hide();
 				dispose();
 			}
