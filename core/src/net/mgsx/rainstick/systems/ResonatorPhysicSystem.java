@@ -67,14 +67,36 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	private float dynTone, dynResonance;
 	private boolean touchControl;
 	
+	// XXX test sendList VS sendFloat performances
+	private static boolean sendSeparate = false;
+	
 	
 	@Editable
-	public void sendFormants (){
-		Pd.audio.sendList("kit-params", pitch, dynTone, dynResonance);
+	public void sendFormants ()
+	{
+		if(sendSeparate){
+			Pd.audio.sendFloat("kit-freq", pitch);
+			Pd.audio.sendFloat("kit-tone", dynTone);
+			Pd.audio.sendFloat("kit-resonance", dynResonance);
+		}else{
+			Pd.audio.sendList("kit-params", pitch, dynTone, dynResonance);
+		}
 	}
 	@Editable
 	public void sendMix(){
-		Pd.audio.sendList("kit-mix", mix_ambiant_dry, mix_ambiant_wet, mix_ball_dry, mix_ball_wet, mix_wall_dry, mix_wall_wet);		
+		
+		if(sendSeparate){
+			Pd.audio.sendFloat("kit-mixa-dry", mix_ambiant_dry);
+			Pd.audio.sendFloat("kit-mixa-wet", mix_ambiant_wet);
+	
+			Pd.audio.sendFloat("kit-mixb-dry", mix_ball_dry);
+			Pd.audio.sendFloat("kit-mixb-wet", mix_ball_wet);
+	
+			Pd.audio.sendFloat("kit-mixw-dry", mix_wall_dry);
+			Pd.audio.sendFloat("kit-mixw-wet", mix_wall_wet);
+		}else{
+			Pd.audio.sendList("kit-mix", mix_ambiant_dry, mix_ambiant_wet, mix_ball_dry, mix_ball_wet, mix_wall_dry, mix_wall_wet);		
+		}
 	}
 	
 	
