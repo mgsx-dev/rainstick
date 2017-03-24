@@ -83,10 +83,18 @@ public class RainstickApplication extends GameApplication
 		
 		GameScreen rainstickScreen = new GameScreen(this, assets, registry){
 			private boolean exiting = false;
+			private boolean entering = true;
+			
+			@Override
+			public void postShow() {
+				super.postShow();
+				entering = false;
+			}
+			
 			@Override
 			public void render(float delta) {
 				super.render(delta);
-				if(Gdx.input.isKeyPressed(Input.Keys.BACK) && !exiting){
+				if(Gdx.input.isKeyPressed(Input.Keys.BACK) && !exiting && !entering){
 					exiting = true;
 					showMenu();
 				}
