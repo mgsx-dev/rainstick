@@ -36,7 +36,9 @@ public class MaskInvertRender extends IteratingSystem
 		batch.end();
 		
 		Gdx.gl.glColorMask(true, true, true, true);
-		Gdx.gl.glDepthRangef(0, 1);
+		
+		// restore settings after invert masks having special depth properties.
+		Gdx.gl.glDepthRangef(0, 1); 
 	}
 	
 	@Override
@@ -44,6 +46,7 @@ public class MaskInvertRender extends IteratingSystem
 		Mask mask = Mask.components.get(entity);
 		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
 		mask.modelInstance.transform.idt();
+		// TODO jni calls could be limited by caching positions after physic phase.
 		mask.modelInstance.transform.setTranslation(physics.body.getPosition().x, physics.body.getPosition().y, 0);
 		mask.modelInstance.transform.rotate(Vector3.Z, physics.body.getAngle() * MathUtils.radiansToDegrees);
 		batch.render(mask.modelInstance);

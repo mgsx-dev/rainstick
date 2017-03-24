@@ -126,9 +126,11 @@ public class ResonatorPhysicSystem extends IteratingSystem
 						float v = self.getBody().getLinearVelocity().cpy().sub(other.getBody().getLinearVelocity()).len();
 						if(v > velMin){
 							Impact i = pool.obtain();
+							// TODO get position from impact (WorldManifold) instead to avoid jniCalls
 							i.x = MathUtils.clamp((self.getBody().getPosition().x - stereoMin) / (stereoMax - stereoMin), 0, 1);
 							i.velocity = MathUtils.clamp((v - velMin) / (velMax - velMin), 0, 1);
 							Resonator resonator = Resonator.components.get((Entity)other.getBody().getUserData());
+							// TODO mass could be cached to avoid jniCall
 							i.mass = (self.getBody().getMassData().mass - massMin) / (massMax - massMin);
 							if(resonator == null){
 								i.material = 0;
@@ -157,10 +159,11 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	public void update(float deltaTime) {
 		super.update(deltaTime);
 		
+		// TODO inject system instead of querying it
 		// no comments
 		GravityAutoSystem gas = getEngine().getSystem(GravityAutoSystem.class);
 		int activeTouch = 0;
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < 20; i++) { // TODO limit to 6
 			if (Gdx.input.isTouched(i)) activeTouch++;
 		}
 		if(activeTouch == 5 ){
@@ -218,12 +221,15 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		{
 			Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
 			
+			// TODO mass could be cached to limit jniCalls
 			float mass = physics.body.getMass();
 			mass = MathUtils.clamp((mass - massMin) / (massMax - massMin), 0, 1);
 			
+			// TODO check vel first and stop if < velMin
 			float vel = physics.body.getLinearVelocity().len();
 			vel = MathUtils.clamp((vel - velMin) / (velMax - velMin), 0, 1);
 			
+			// TODO position could be cached to avoid jniCalls
 			float pos = MathUtils.clamp((physics.body.getPosition().x - stereoMin) / (stereoMax - stereoMin), 0, 1);
 			
 			float energy = vel * vel * mass;

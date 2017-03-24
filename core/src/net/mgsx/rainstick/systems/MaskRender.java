@@ -33,7 +33,7 @@ public class MaskRender extends IteratingSystem
 		
 		Gdx.gl.glClearDepthf(0);
 		Gdx.gl.glClear(GL20.GL_DEPTH_BUFFER_BIT);
-		Gdx.gl.glColorMask(false, false, false, false); // XXX debug here
+		Gdx.gl.glColorMask(false, false, false, false);
 		super.update(deltaTime);
 		batch.end();
 		
@@ -46,7 +46,7 @@ public class MaskRender extends IteratingSystem
 		Mask mask = Mask.components.get(entity);
 		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
 		if(mask.modelInstance== null) return;
-		mask.modelInstance.transform.idt();
+		// TODO jni calls could be limited by caching positions after physic phase.		mask.modelInstance.transform.idt();
 		mask.modelInstance.transform.setTranslation(physics.body.getPosition().x, physics.body.getPosition().y, 0);
 		mask.modelInstance.transform.rotate(Vector3.Z, physics.body.getAngle() * MathUtils.radiansToDegrees);
 		batch.render(mask.modelInstance);
