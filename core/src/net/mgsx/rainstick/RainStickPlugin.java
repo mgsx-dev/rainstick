@@ -42,7 +42,7 @@ public class RainStickPlugin implements Plugin, DefaultPlugin
 		
 		engine.entityEngine.addSystem(new MaskRender(engine));
 		engine.entityEngine.addSystem(new MaskInvertRender(engine));
-		engine.entityEngine.addSystem(new PolygonMaskRenderer(engine));
+		engine.entityEngine.addSystem(new PolygonMaskRenderer());
 		engine.entityEngine.addSystem(new BackgroundSystem(engine));
 		engine.entityEngine.addSystem(new BallOutlineRender(engine));
 		engine.entityEngine.addSystem(new ImpactRender(engine));

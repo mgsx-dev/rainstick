@@ -3,15 +3,13 @@ package net.mgsx.rainstick.systems;
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.EntityListener;
+import com.badlogic.ashley.core.EntitySystem;
 import com.badlogic.ashley.core.Family;
-import com.badlogic.ashley.systems.IteratingSystem;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Mesh;
 import com.badlogic.gdx.graphics.VertexAttribute;
 import com.badlogic.gdx.graphics.g3d.Material;
-import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.attributes.DepthTestAttribute;
@@ -19,34 +17,22 @@ import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.EarClippingTriangulator;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.ChainShape;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.ShortArray;
 
-import net.mgsx.game.core.GamePipeline;
-import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.components.Box2DFixtureModel;
 import net.mgsx.rainstick.components.InvertMask;
 import net.mgsx.rainstick.components.Mask;
 
-public class PolygonMaskRenderer extends IteratingSystem
+public class PolygonMaskRenderer extends EntitySystem
 {
-	private ModelBatch batch;
-	private GameScreen game;
-	
-	public PolygonMaskRenderer(GameScreen game) {
-		super(Family.all(Mask.class, Box2DBodyModel.class).get(), GamePipeline.RENDER -1);
-		this.game = game;
-		batch = new ModelBatch();
-	}
-	
 	@Override
 	public void addedToEngine(Engine engine) {
 		super.addedToEngine(engine);
-		engine.addEntityListener(getFamily(), new EntityListener() {
+		engine.addEntityListener(Family.all(Mask.class, Box2DBodyModel.class).get(), new EntityListener() {
 			
 			@Override
 			public void entityRemoved(Entity entity) {
@@ -59,7 +45,6 @@ public class PolygonMaskRenderer extends IteratingSystem
 				
 				ModelBuilder mb = new ModelBuilder();
 				mb.begin();
-				Vector2 pos = new Vector2(physics.body.getPosition());
 				
 				Vector2 v = new Vector2();
 				for(Box2DFixtureModel fix : physics.fixtures){
@@ -130,23 +115,4 @@ public class PolygonMaskRenderer extends IteratingSystem
 		});
 	}
 	
-	@Override
-	public void update(float deltaTime) {
-		batch.begin(game.camera);
-		Gdx.gl.glDepthFunc(GL20.GL_LESS);
-		Gdx.gl.glEnable(GL20.GL_DEPTH_TEST);
-		//super.update(deltaTime);
-		batch.end();
-		Gdx.gl.glDepthRangef(0, 1);
-	}
-	
-	@Override
-	protected void processEntity(Entity entity, float deltaTime) {
-		Mask mask = Mask.components.get(entity);
-		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
-		mask.modelInstance.transform.idt();
-		mask.modelInstance.transform.rotate(Vector3.Z, physics.body.getAngle() * MathUtils.radiansToDegrees);
-		mask.modelInstance.transform.setTranslation(physics.body.getPosition().x + 20, physics.body.getPosition().y, 0);
-		batch.render(mask.modelInstance);
-	}
 }
