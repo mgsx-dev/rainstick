@@ -3342,7 +3342,7 @@ systems: [
 	{
 		type: rainstick.impact.update
 		enabled: true
-		lifeMax: 3
+		lifeMax: 2.2388098
 	}
 	{
 		type: core.clearScreen
@@ -3397,9 +3397,9 @@ systems: [
 		enabled: true
 		shader: {
 			vertex: shaders/impact-vertex.glsl
-			fragment: shaders/bg-fragment.glsl
+			fragment: shaders/impact-ripple-fragment.glsl
 		}
-		scale: 10
+		scale: 3.6101663
 	}
 	{
 		type: g2d.render
