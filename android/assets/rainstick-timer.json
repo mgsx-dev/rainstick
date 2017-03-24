@@ -6,8 +6,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: -4.9825735
-					y: 5.9975014
+					x: -4.9821143
+					y: 5.980011
 				}
 			}
 			fixtures: [
@@ -2045,16 +2045,16 @@ systems: [
 		massMax: 0.08147368
 		velMin: 0
 		velMax: 9.616471
-		energyMax: 16
+		energyMax: 19.329742
 		pitch: 72
 		tone: 0.6360089
-		resonance: 1624.7316
-		mix_ambiant_dry: 79.53596
-		mix_ambiant_wet: 41.758396
-		mix_ball_dry: 37.06424
-		mix_ball_wet: 21.210234
-		mix_wall_dry: 69.698944
-		mix_wall_wet: 49.214973
+		resonance: 1118.9133
+		mix_ambiant_dry: 54.23867
+		mix_ambiant_wet: 28.434341
+		mix_ball_dry: 39.34444
+		mix_ball_wet: 18.800426
+		mix_wall_dry: 34.13787
+		mix_wall_wet: 55.456665
 	}
 	{
 		type: rainstick.calibration
@@ -2063,7 +2063,7 @@ systems: [
 	{
 		type: rainstick.impact.update
 		enabled: true
-		lifeMax: 1.3508071
+		lifeMax: 2.9394548
 	}
 	{
 		type: core.clearScreen
@@ -2121,7 +2121,7 @@ systems: [
 			vertex: shaders/impact-vertex.glsl
 			fragment: shaders/impact-ripple-fragment.glsl
 		}
-		scale: 6.0776696
+		scale: 6.23033
 	}
 	{
 		type: g2d.render
@@ -2138,8 +2138,9 @@ views: [
 	rainstick.background
 	rainstick.calibration
 	rainstick.gravity
+	net.mgsx.game.plugins.core.systems.GridDebugSystem
+	net.mgsx.game.plugins.camera.systems.ViewportDebugSystem
 	core.clearScreen
 	rainstick.outline
-	net.mgsx.game.plugins.core.systems.GridDebugSystem
 ]
 }

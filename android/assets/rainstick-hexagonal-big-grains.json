@@ -699,6 +699,7 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
+			x: -2.4762847
 			y: 9
 		}
 		timeStep: 0.04249719
@@ -710,21 +711,21 @@ systems: [
 		enabled: true
 		stereoClusteringSteps: 2
 		stereoMin: -10.013129
-		stereoMax: 5
+		stereoMax: 5.3745637
 		massMin: 0
 		massMax: 0.41
 		velMin: 0
-		velMax: 6.7
-		energyMax: 16
-		pitch: 48
+		velMax: 11.982272
+		energyMax: 6.6985774
+		pitch: 36.75571
 		tone: 0.34375286
 		resonance: 1283.1976
-		mix_ambiant_dry: 20
-		mix_ambiant_wet: 32
-		mix_ball_dry: 53.64404
-		mix_ball_wet: 34.72097
-		mix_wall_dry: 30.717379
-		mix_wall_wet: 38.67005
+		mix_ambiant_dry: 0
+		mix_ambiant_wet: 79.53299
+		mix_ball_dry: 30.851753
+		mix_ball_wet: 13.63253
+		mix_wall_dry: 38.045185
+		mix_wall_wet: 57.574448
 	}
 	{
 		type: rainstick.calibration
@@ -806,8 +807,9 @@ views: [
 	rainstick.background
 	rainstick.calibration
 	rainstick.gravity
+	net.mgsx.game.plugins.core.systems.GridDebugSystem
+	net.mgsx.game.plugins.camera.systems.ViewportDebugSystem
 	core.clearScreen
 	rainstick.outline
-	net.mgsx.game.plugins.core.systems.GridDebugSystem
 ]
 }
