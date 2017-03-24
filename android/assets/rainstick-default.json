@@ -66,7 +66,7 @@ entities: [
 		}
 		rainstick.mask: {}
 		rainstick.resonator: {
-			material: 48
+			material: 40
 		}
 	}
 	{
@@ -116,7 +116,7 @@ entities: [
 			]
 		}
 		rainstick.resonator: {
-			material: 69
+			material: 44
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -171,7 +171,7 @@ entities: [
 			]
 		}
 		rainstick.resonator: {
-			material: 66
+			material: 45
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -2072,7 +2072,7 @@ entities: [
 			]
 		}
 		rainstick.resonator: {
-			material: 67
+			material: 37
 		}
 		rainstick.mask: {}
 		rainstick.mask-invert: {}
@@ -4970,7 +4970,7 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			y: 9
+			y: -9
 		}
 		timeStep: 0.008433531
 		velocityIterations: 11
@@ -4986,16 +4986,16 @@ systems: [
 		massMax: 0.005448454
 		velMin: 0
 		velMax: 13.258554
-		energyMax: 16
-		pitch: 48
+		energyMax: 23.347857
+		pitch: 26.959707
 		tone: 0
 		resonance: 295.86407
-		mix_ambiant_dry: 20
-		mix_ambiant_wet: 32
-		mix_ball_dry: 27
-		mix_ball_wet: 70
-		mix_wall_dry: 25
-		mix_wall_wet: 80
+		mix_ambiant_dry: 64.468765
+		mix_ambiant_wet: 36.812878
+		mix_ball_dry: 42.973858
+		mix_ball_wet: 20.66377
+		mix_wall_dry: 36.402534
+		mix_wall_wet: 19.743433
 	}
 	{
 		type: rainstick.calibration
@@ -5078,8 +5078,9 @@ views: [
 	rainstick.background
 	rainstick.calibration
 	rainstick.gravity
+	net.mgsx.game.plugins.core.systems.GridDebugSystem
+	net.mgsx.game.plugins.camera.systems.ViewportDebugSystem
 	core.clearScreen
 	rainstick.outline
-	net.mgsx.game.plugins.core.systems.GridDebugSystem
 ]
 }
