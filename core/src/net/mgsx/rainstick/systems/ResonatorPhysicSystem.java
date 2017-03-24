@@ -221,13 +221,14 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		{
 			Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
 			
+			float vel = physics.body.getLinearVelocity().len();
+			if(vel < velMin) continue;
+			vel = MathUtils.clamp((vel - velMin) / (velMax - velMin), 0, 1);
+			
+			
 			// TODO mass could be cached to limit jniCalls
 			float mass = physics.body.getMass();
 			mass = MathUtils.clamp((mass - massMin) / (massMax - massMin), 0, 1);
-			
-			// TODO check vel first and stop if < velMin
-			float vel = physics.body.getLinearVelocity().len();
-			vel = MathUtils.clamp((vel - velMin) / (velMax - velMin), 0, 1);
 			
 			// TODO position could be cached to avoid jniCalls
 			float pos = MathUtils.clamp((physics.body.getPosition().x - stereoMin) / (stereoMax - stereoMin), 0, 1);
