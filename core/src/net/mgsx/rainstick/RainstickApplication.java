@@ -3,6 +3,7 @@ package net.mgsx.rainstick;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGeneratorLoader;
@@ -29,6 +30,8 @@ import net.mgsx.rainstick.screens.RainstickSplashScreen;
  */
 public class RainstickApplication extends GameApplication
 {
+	public static boolean debugFPS = false;
+	
 	public static final float ViewportWorldWidth = 480;
 	public static final float ViewportWorldHeight = 640;
 	
@@ -76,11 +79,16 @@ public class RainstickApplication extends GameApplication
 		GameRegistry registry = new GameRegistry();
 		registry.registerPlugin(new RainStickPlugin());
 		// create default rainstick screen (loading default rainstick data)
+		final FPSLogger logger = new FPSLogger();
+		
 		GameScreen rainstickScreen = new GameScreen(this, assets, registry){
 			@Override
 			public void render(float delta) {
 				super.render(delta);
 				if(Gdx.input.isKeyPressed(Input.Keys.BACK)) showMenu();
+				if(debugFPS){
+					logger.log();
+				}
 			}
 			@Override
 			public void hide() {
