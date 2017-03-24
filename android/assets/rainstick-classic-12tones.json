@@ -1881,16 +1881,16 @@ entities: [
 									y: 1.9941187
 								}
 								{
-									x: 7.0095983
-									y: -0.0058813095
+									x: 6.973995
+									y: 0.0033807755
 								}
 								{
-									x: 7.0095983
-									y: -2.0058813
+									x: 6.971866
+									y: -2.0877962
 								}
 								{
-									x: 7
-									y: -23
+									x: 6.9846406
+									y: -23.008396
 								}
 								{
 									x: 6.240693
@@ -1970,8 +1970,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: -4
-					y: 13
+					x: -4.0107255
+					y: 13.015601
 				}
 			}
 			fixtures: [
@@ -3308,7 +3308,7 @@ systems: [
 		enabled: true
 		runSimulation: true
 		gravity: {
-			y: -9.213129
+			y: 9.213129
 		}
 		timeStep: 0.033333335
 		velocityIterations: 8
@@ -3323,17 +3323,17 @@ systems: [
 		massMin: 0
 		massMax: 0.013680482
 		velMin: 1
-		velMax: 7.0355945
-		energyMax: 16
-		pitch: 36
+		velMax: 9.574931
+		energyMax: 22.44123
+		pitch: 48
 		tone: 0.09033881
-		resonance: 1072.3971
+		resonance: 941.05096
 		mix_ambiant_dry: 20
-		mix_ambiant_wet: 32
-		mix_ball_dry: 16.16771
-		mix_ball_wet: 37.256237
-		mix_wall_dry: 22.54299
-		mix_wall_wet: 62.572605
+		mix_ambiant_wet: 0
+		mix_ball_dry: 26.796814
+		mix_ball_wet: 22.767937
+		mix_wall_dry: 25.366474
+		mix_wall_wet: 32.991917
 	}
 	{
 		type: rainstick.calibration
@@ -3416,6 +3416,8 @@ views: [
 	rainstick.background
 	rainstick.calibration
 	rainstick.gravity
+	net.mgsx.game.plugins.core.systems.GridDebugSystem
+	net.mgsx.game.plugins.camera.systems.ViewportDebugSystem
 	core.clearScreen
 	rainstick.outline
 ]
