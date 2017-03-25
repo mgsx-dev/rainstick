@@ -233,19 +233,19 @@ public class ResonatorPhysicSystem extends IteratingSystem implements SystemSett
 		float position = 0;
 		for(Entity entity : balls)
 		{
-			Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
+			Ball ball = Ball.components.get(entity);
 			
-			float vel = physics.body.getLinearVelocity().len();
+			float vel = ball.velocity.len();
 			if(vel < velMin) continue;
 			vel = MathUtils.clamp((vel - velMin) / (velMax - velMin), 0, 1);
 			
 			
 			// TODO mass could be cached to limit jniCalls
-			float mass = physics.body.getMass();
+			float mass = ball.mass;
 			mass = MathUtils.clamp((mass - massMin) / (massMax - massMin), 0, 1);
 			
 			// TODO position could be cached to avoid jniCalls
-			float pos = MathUtils.clamp((physics.body.getPosition().x - stereoMin) / (stereoMax - stereoMin), 0, 1);
+			float pos = MathUtils.clamp((ball.position.x - stereoMin) / (stereoMax - stereoMin), 0, 1);
 			
 			float energy = vel * vel * mass;
 			totalEnergy += energy;

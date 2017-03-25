@@ -87,13 +87,11 @@ public class BallOutlineRender extends IteratingSystem {
 	}
 	
 	@Override
-	protected void processEntity(Entity entity, float deltaTime) {
-		Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
-		float x = physics.body.getPosition().x;
-		float y = physics.body.getPosition().y;
+	protected void processEntity(Entity entity, float deltaTime) 
+	{
 		Ball ball = Ball.components.get(entity);
 		
 		batch.setColor(1f,1f,1f, opacity);
-		batch.circle(x, y, ball.radius * (minRadiusRate * (1-feedback) + maxRadiusRate * feedback), 16);
+		batch.circle(ball.position.x, ball.position.y, ball.radius * (minRadiusRate * (1-feedback) + maxRadiusRate * feedback), 16);
 	}
 }

@@ -16,6 +16,7 @@ import net.mgsx.rainstick.components.Mask;
 import net.mgsx.rainstick.components.Resonator;
 import net.mgsx.rainstick.systems.BackgroundSystem;
 import net.mgsx.rainstick.systems.BallOutlineRender;
+import net.mgsx.rainstick.systems.BallPhysicCacheSystem;
 import net.mgsx.rainstick.systems.GravityAutoSystem;
 import net.mgsx.rainstick.systems.GyroSystem;
 import net.mgsx.rainstick.systems.ImpactRender;
@@ -35,6 +36,7 @@ public class RainStickPlugin implements Plugin, DefaultPlugin
 		engine.assets.setLoader(FreeTypeFontGenerator.class, new FreeTypeFontGeneratorLoader(engine.assets.getFileHandleResolver()));
 		engine.assets.setLoader(BitmapFont.class, ".ttf", new FreetypeFontLoader(engine.assets.getFileHandleResolver()));
 		
+		engine.entityEngine.addSystem(new BallPhysicCacheSystem());
 		engine.entityEngine.addSystem(new ResonatorPhysicSystem(engine));
 		
 		engine.entityEngine.addSystem(new ImpactUpdate());
