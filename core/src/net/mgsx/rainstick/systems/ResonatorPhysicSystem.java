@@ -133,6 +133,8 @@ public class ResonatorPhysicSystem extends IteratingSystem implements SystemSett
 		
 		engine.addEntityListener(getFamily(), new EntityListener() {
 			
+			private final Vector2 velCache = new Vector2();
+			
 			@Override
 			public void entityRemoved(Entity entity) {
 				// TODO Auto-generated method stub
@@ -143,24 +145,26 @@ public class ResonatorPhysicSystem extends IteratingSystem implements SystemSett
 			public void entityAdded(Entity entity) {
 				
 				final Box2DBodyModel physics = Box2DBodyModel.components.get(entity);
+				final Ball ball = Ball.components.get(entity);
+				
 				physics.setListener(new Box2DEntityListener(){
 					@Override
 					public void beginContact(Contact contact, Fixture self, Fixture other) {
-						float v = self.getBody().getLinearVelocity().cpy().sub(other.getBody().getLinearVelocity()).len();
-						if(v > velMin){
+						float vel2 = velCache.set(self.getBody().getLinearVelocity()).sub(other.getBody().getLinearVelocity()).len2();
+						if(vel2 > velMin * velMin){
+							float v = (float)Math.sqrt(vel2);
 							Impact i = pool.obtain();
-							// TODO get position from impact (WorldManifold) instead to avoid jniCalls
-							i.x = MathUtils.clamp((self.getBody().getPosition().x - stereoMin) / (stereoMax - stereoMin), 0, 1);
 							i.velocity = MathUtils.clamp((v - velMin) / (velMax - velMin), 0, 1);
 							Resonator resonator = Resonator.components.get((Entity)other.getBody().getUserData());
-							// TODO mass could be cached to avoid jniCall
-							i.mass = (self.getBody().getMassData().mass - massMin) / (massMax - massMin);
+							i.mass = (ball.mass - massMin) / (massMax - massMin);
 							if(resonator == null){
 								i.material = 0;
 							}else{
 								i.material = resonator.material;
 							}
 							i.position.set(contact.getWorldManifold().getPoints()[0]);
+							i.x = MathUtils.clamp((i.position.x - stereoMin) / (stereoMax - stereoMin), 0, 1);
+							
 							int index = MathUtils.clamp(Math.round(i.x * stereoClusteringSteps), 0, stereoClusteringSteps-1);
 							while(impacts.size <= index) impacts.add(new Array<Impact>());
 							impacts.get(index).add(i);
