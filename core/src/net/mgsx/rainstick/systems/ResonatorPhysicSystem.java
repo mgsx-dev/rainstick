@@ -19,6 +19,7 @@ import net.mgsx.game.core.GameScreen;
 import net.mgsx.game.core.annotations.Editable;
 import net.mgsx.game.core.annotations.EditableSystem;
 import net.mgsx.game.core.annotations.Storable;
+import net.mgsx.game.core.storage.SystemSettingsListener;
 import net.mgsx.game.plugins.box2d.components.Box2DBodyModel;
 import net.mgsx.game.plugins.box2d.listeners.Box2DEntityListener;
 import net.mgsx.pd.Pd;
@@ -29,7 +30,7 @@ import net.mgsx.rainstick.components.Resonator;
 
 @Storable("rainstick.resonator-system")
 @EditableSystem
-public class ResonatorPhysicSystem extends IteratingSystem
+public class ResonatorPhysicSystem extends IteratingSystem implements SystemSettingsListener
 {
 	private static class Impact implements Comparable<Impact>{
 
@@ -64,22 +65,24 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	@Editable
 	public float mix_ambiant_dry = 20, mix_ambiant_wet= 32,mix_ball_dry= 27 , mix_ball_wet = 70, mix_wall_dry = 25, mix_wall_wet = 80;
 	
-	private float dynTone, dynResonance;
-	private boolean touchControl;
-	
 	// XXX test sendList VS sendFloat performances
 	private static boolean sendSeparate = false;
 	
+	@Override
+	public void onSettingsLoaded() {
+		sendFormants();
+		sendMix();
+	}
 	
 	@Editable
 	public void sendFormants ()
 	{
 		if(sendSeparate){
 			Pd.audio.sendFloat("kit-freq", pitch);
-			Pd.audio.sendFloat("kit-tone", dynTone);
-			Pd.audio.sendFloat("kit-resonance", dynResonance);
+			Pd.audio.sendFloat("kit-tone", tone);
+			Pd.audio.sendFloat("kit-resonance", resonance);
 		}else{
-			Pd.audio.sendList("kit-params", pitch, dynTone, dynResonance);
+			Pd.audio.sendList("kit-params", pitch, tone, resonance);
 		}
 	}
 	@Editable
@@ -125,8 +128,6 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		// TODO dispose when finished !
 		// TODO use assets injection instead ...
 		patch = Pd.audio.open(Gdx.files.internal("pd/engine.pd"));
-		sendFormants();
-		sendMix();
 		
 		super.addedToEngine(engine);
 		
@@ -179,7 +180,6 @@ public class ResonatorPhysicSystem extends IteratingSystem
 	private boolean autogravity = false;
 	@Override
 	public void update(float deltaTime) {
-		super.update(deltaTime);
 		
 		// TODO inject system instead of querying it
 		// no comments
@@ -201,19 +201,11 @@ public class ResonatorPhysicSystem extends IteratingSystem
 		
 		// map user input to tone and resonance
 		if ( Gdx.input.isTouched()){
-			touchControl = true;
-			this.dynTone = ((float)Gdx.input.getX() / Gdx.graphics.getWidth());
-			this.dynResonance = ((float)Gdx.input.getY() / Gdx.graphics.getHeight())*1500 + 150;	
-		}else if(!touchControl){
-			this.dynTone = this.tone;
-			this.dynResonance = this.resonance;
+			float dynTone = ((float)Gdx.input.getX() / Gdx.graphics.getWidth());
+			float dynResonance = ((float)Gdx.input.getY() / Gdx.graphics.getHeight())*1500 + 150;
+			Pd.audio.sendFloat("kit-tone", dynTone);
+			Pd.audio.sendFloat("kit-resonance", dynResonance);
 		}
-		
-		sendFormants();
-		sendMix();
-		
-		
-		
 		
 		for(Array<Impact> a : impacts){
 			if(a.size > 0){
