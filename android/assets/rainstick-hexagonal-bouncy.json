@@ -264,8 +264,8 @@ entities: [
 			id: Chain Loop
 			def: {
 				position: {
-					x: -8.55035
-					y: -4.4036026
+					x: -8.681028
+					y: -4.3123703
 				}
 			}
 			fixtures: [
@@ -741,8 +741,8 @@ entities: [
 			def: {
 				type: DynamicBody
 				position: {
-					x: -0.39247394
-					y: 4
+					x: -0.9187584
+					y: 1.7462814
 				}
 				allowSleep: false
 			}
@@ -2830,7 +2830,7 @@ systems: [
 		runSimulation: true
 		gravity: {
 			x: 1.667472
-			y: 1.8336408
+			y: -1.8336408
 		}
 		timeStep: 0.04249719
 		velocityIterations: 11
@@ -2840,22 +2840,22 @@ systems: [
 		type: rainstick.resonator-system
 		enabled: true
 		stereoClusteringSteps: 2
-		stereoMin: -9.723556
-		stereoMax: 6.6879783
-		massMin: 0
-		massMax: 0.020213958
-		velMin: 0.15015045
-		velMax: 18.282598
-		energyMax: 16
-		pitch: 36
+		stereoMin: -10.584785
+		stereoMax: 6.046069
+		massMin: 0.07465016
+		massMax: 0.024420664
+		velMin: 0.18319415
+		velMax: 19.94216
+		energyMax: 25.202005
+		pitch: 60
 		tone: 0.7067536
-		resonance: 2205.3203
-		mix_ambiant_dry: 92.03555
-		mix_ambiant_wet: 63.994953
-		mix_ball_dry: 75.29998
-		mix_ball_wet: 50.335205
-		mix_wall_dry: 55.43386
-		mix_wall_wet: 69.26388
+		resonance: 1163.946
+		mix_ambiant_dry: 8.405545
+		mix_ambiant_wet: 13.109396
+		mix_ball_dry: 6.373374
+		mix_ball_wet: 8.366583
+		mix_wall_dry: 35.848354
+		mix_wall_wet: 34.184185
 	}
 	{
 		type: rainstick.calibration
