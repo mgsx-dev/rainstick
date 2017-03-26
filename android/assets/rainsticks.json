@@ -4,7 +4,7 @@
 		credits: "by Rainstick maker"
 		path: rainstick-classic-12tones.json
 		preview: rainstick-classic-12tones.png
-		description: "Each step gets you a half tone along a twelve tone scale.\n Drag your finger around to shape the sound."
+		description: "Each step gets you a half tone along a twelve tone \n scale.Drag your finger around to shape the sound."
 	}
 	{
 		title: "Timer"
