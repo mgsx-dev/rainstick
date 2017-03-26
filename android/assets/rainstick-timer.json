@@ -2029,7 +2029,7 @@ systems: [
 		runSimulation: true
 		gravity: {
 			x: 0.35554907
-			y: 9.6763115
+			y: -9.6763115
 		}
 		timeStep: 0.029303495
 		velocityIterations: 11
@@ -2046,15 +2046,15 @@ systems: [
 		velMin: 0
 		velMax: 9.616471
 		energyMax: 19.329742
-		pitch: 72
+		pitch: 74.11493
 		tone: 0.6360089
 		resonance: 1118.9133
 		mix_ambiant_dry: 54.23867
-		mix_ambiant_wet: 28.434341
+		mix_ambiant_wet: 26.502663
 		mix_ball_dry: 39.34444
 		mix_ball_wet: 18.800426
-		mix_wall_dry: 34.13787
-		mix_wall_wet: 55.456665
+		mix_wall_dry: 32.46478
+		mix_wall_wet: 39.00291
 	}
 	{
 		type: rainstick.calibration
