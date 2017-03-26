@@ -4,41 +4,41 @@
 		credits: "by Rainstick maker"
 		path: rainstick-classic-12tones.json
 		preview: rainstick-classic-12tones.png
-		description: "Each step gets you a half tone along a twelve tone \n scale.Drag your finger around to shape the sound."
+		description: "Each step gets you a half tone along a twelve tone \n scale.\nDrag your finger around to shape the sound."
 	}
 	{
 		title: "Timer"
 		credits: "by Rainstick maker"
 		path: rainstick-timer.json
 		preview: rainstick-timer.png
-		description: "A melodic timer ... it doesn't really give time though..."
+		description: "A melodic timer... it doesn't really give time though...\nDrag your finger around to shape the sound."
 	}
 	{
 		title: "Big grains !"
 		credits: "by Rainstick maker"
 		path: rainstick-hexagonal-big-grains.json
 		preview: rainstick-hexagonal-big-grains.png
-		description: "What happens if you have only two big grains ? "
+		description: "What happens if you have only two big grains ?\nDrag your finger around to shape the sound."
 	}
 	{
 		title: "Hex-madness bouncy edition"
 		credits: "by Rainstick maker"
 		path: rainstick-hexagonal-bouncy.json
 		preview: rainstick-hexagonal-bouncy.png
-		description: "man, those grains are bouncy ! "
+		description: "man, those grains are bouncy !\nDrag your finger around to shape the sound. "
 	}
 	{
 		title: "Hex-madness flowy edition"
 		credits: "by Rainstick maker"
 		path: rainstick-hexagonal-flowy.json
 		preview: rainstick-hexagonal-flowy.png
-		description: "man, those grains are flowy ! "
+		description: "man, those grains are flowy !\nDrag your finger around to shape the sound. "
 	}
 	{
 		title: "Legacy"
 		credits: "by Rainstick maker"
 		path: rainstick-default.json
 		preview: rainstick-default.png
-		description: "v.0.0.1"
+		description: "v.0.0.1 \nDrag your finger around to shape the sound."
 	}
 ]
