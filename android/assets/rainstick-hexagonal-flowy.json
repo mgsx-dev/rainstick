@@ -4014,7 +4014,7 @@ systems: [
 		runSimulation: true
 		gravity: {
 			x: 7.1658936
-			y: -9
+			y: 9
 		}
 		timeStep: 0.016170762
 		velocityIterations: 11
@@ -4054,7 +4054,7 @@ systems: [
 		type: core.clearScreen
 		enabled: true
 		color: {
-			r: 0.10929243
+			r: 0.0
 			a: 1
 		}
 		clearColor: true
@@ -4083,7 +4083,6 @@ systems: [
 		scale: 0.014570187
 		texScale: 0.37052697
 		color: {
-			r: 1
 			g: 1
 			b: 1
 			a: 1
