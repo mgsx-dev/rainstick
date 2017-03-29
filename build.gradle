@@ -22,8 +22,8 @@ allprojects {
         box2DLightsVersion = '1.4'
         ashleyVersion = '1.7.0'
         aiVersion = '1.8.0'
-        kitVersion = '0.0.2-SNAPSHOT'
-        pdVersion = '0.6.0-SNAPSHOT'
+        kitVersion = '0.0.2'
+        pdVersion = '0.6.0'
     }
 
     repositories {
