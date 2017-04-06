@@ -67,8 +67,8 @@ public class RainstickApplication extends GameApplication
 		
 		// add transition (fade) from loading screen to rainstickScreen
 		// loading screen is splash screen with minimum timeout of 2 seconds.
-		setScreen(Transitions.loader(assets, Transitions.timeout(splashScreen, 2)));
-		addTransition(Transitions.fade(Transitions.timeout(selectorScreen, 2), 2.3f));
+		setScreen(Transitions.loader(assets, Transitions.timeout(splashScreen, 3)));
+		addTransition(Transitions.fade(Transitions.timeout(selectorScreen, 2), 0.85f));
 	}
 	
 	public void showRainstick(Rainstick rainstick)
@@ -111,14 +111,15 @@ public class RainstickApplication extends GameApplication
 				
 		rainstickScreen.load(Gdx.files.internal(rainstick.path));
 		
-		setTransition(Transitions.fade(Transitions.loader(assets, Transitions.timeout(introScreen, 2)), 1.5f));
-		addTransition(Transitions.fade(rainstickScreen, 2.3f));
+		setTransition(Transitions.fade(Transitions.loader(assets, Transitions.timeout(Transitions.touch(introScreen), 10)), 0.85f));
+		addTransition(Transitions.fade(rainstickScreen, 2.0f));
 	}
 	
 	public void showMenu()
 	{
-		setTransition(Transitions.fade(Transitions.empty(Color.WHITE), 1f));
-		addTransition(Transitions.fade(selectorScreen, 1));
+		setTransition(Transitions.fade(Transitions.empty(Color.WHITE), 0.3f));
+		addTransition(Transitions.fade(selectorScreen, 0.3f));
+		
 	}
 	
 	@Override
