@@ -14,7 +14,7 @@ allprojects {
     apply plugin: "eclipse"
     apply plugin: "idea"
 
-    version = '1.1.0-SNAPSHOT'
+    version = '1.1.0'
     ext {
         appName = "rainstick"
         gdxVersion = '1.9.6'
@@ -22,7 +22,7 @@ allprojects {
         box2DLightsVersion = '1.4'
         ashleyVersion = '1.7.0'
         aiVersion = '1.8.0'
-        kitVersion = '0.0.3-SNAPSHOT'
+        kitVersion = '0.0.3'
         pdVersion = '0.6.0'
     }
 
