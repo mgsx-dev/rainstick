@@ -8,7 +8,6 @@ precision mediump float;
 varying vec2 v_texCoords;
 uniform sampler2D u_texture;
 uniform float u_time;
-varying vec2 v_world;
 varying vec4 v_color;
 
 
@@ -24,12 +23,10 @@ void main() {
     float centerLight = 0.2;
     float oblique = 0.25; 
           
-    vec2 uv = v_texCoords / vec2(v_world.x, v_world.y);
+   
     float modifiedTime = u_time * waveSpeed;
     float distance = 1.0 -length(v_texCoords);
-    float multiplier = (distance < 1.0) ? ((distance-1.0)*(distance-1.0)) : 0.2;
     float addend = (sin(frequency*distance-modifiedTime)+centerLight) * waveStrength ;
-    vec2 newTexCoord = uv+ addend*oblique;    
     
     vec4 colorToAdd = sunlightColor * sunlightStrength * addend;
 
