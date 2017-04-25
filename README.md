@@ -1,3 +1,9 @@
+# What is it ?
+
+This repo is the code for an audio/visual rainstick simulation built with the libgdx framework and gdx-pd an extension for libgdx bringin pure-data support (for realtime audio synthesis).
+
+If you build the project this is what you'll get : https://youtu.be/1-Oh8367MI4
+
 
 # Contribute
 
